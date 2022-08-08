@@ -45,11 +45,10 @@ func StartInstance(configFormat string, configBytes []byte) (*Instance, error) {
 // Since it is under a proxy context, the LocalAddr() and RemoteAddr() in returned net.Conn
 // will not show real addresses being used for communication, complete stealth.
 //
-// v2ray:api:stable
 func Dial(ctx context.Context, v *Instance, dest net.Destination) (net.Conn, error) {
 	dispatcher := v.GetFeature(routing.DispatcherType())
 	if dispatcher == nil {
-		return nil, newError("routing.Dispatcher is not registered in V2Ray core")
+		return nil, newError("routing.Dispatcher is not registered in CS core")
 	}
 	r, err := dispatcher.(routing.Dispatcher).Dispatch(ctx, dest)
 	if err != nil {
@@ -68,11 +67,10 @@ func Dial(ctx context.Context, v *Instance, dest net.Destination) (net.Conn, err
 //
 // TODO: SetDeadline() / SetReadDeadline() / SetWriteDeadline() are not implemented.
 //
-// v2ray:api:beta
 func DialUDP(ctx context.Context, v *Instance) (net.PacketConn, error) {
 	dispatcher := v.GetFeature(routing.DispatcherType())
 	if dispatcher == nil {
-		return nil, newError("routing.Dispatcher is not registered in V2Ray core")
+		return nil, newError("routing.Dispatcher is not registered in CS core")
 	}
 	return udp.DialDispatcher(ctx, dispatcher.(routing.Dispatcher))
 }

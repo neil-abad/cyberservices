@@ -37,8 +37,28 @@ func (ctx *ResolvableContext) GetTargetIPs() []net.IP {
 	return nil
 }
 
+func Dial(ctx context.Context, v *Instance, dest net.Destination) (net.Conn, error) {
+	dispatcher := v.GetFeature(routing.DispatcherType())
+	if dispatcher == nil {
+		return nil, newError("routing.Dispatcher is not registered in CS core")
+	}
+	r, err := dispatcher.(routing.Dispatcher).Dispatch(ctx, dest)
+	if err != nil {
+		return nil, err
+	}
+	var readerOpt net.ConnectionOption
+	if dest.Network == net.Network_TCP {
+		readerOpt = net.ConnectionOutputMulti(r.Reader)
+	} else {
+		readerOpt = net.ConnectionOutputMultiUDP(r.Reader)
+	}
+	return net.NewConnection(net.ConnectionInputMulti(r.Writer), readerOpt), nil
+}
+
 // ContextWithDNSClient creates a new routing context with domain resolving capability.
 // Resolved domain IPs can be retrieved by GetTargetIPs().
 func ContextWithDNSClient(ctx routing.Context, client dns.Client) routing.Context {
 	return &ResolvableContext{Context: ctx, dnsClient: client}
 }
+
+//API
