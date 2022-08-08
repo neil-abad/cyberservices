@@ -64,7 +64,6 @@ func Dial(ctx context.Context, v *Instance, dest net.Destination) (net.Conn, err
 	return net.NewConnection(net.ConnectionInputMulti(r.Writer), readerOpt), nil
 }
 
-// DialUDP provides a way to exchange UDP packets through V2Ray instance to remote servers.
 // Since it is under a proxy context, the LocalAddr() in returned PacketConn will not show the real address.
 //
 // TODO: SetDeadline() / SetReadDeadline() / SetWriteDeadline() are not implemented.

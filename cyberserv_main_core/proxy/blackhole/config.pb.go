@@ -240,6 +240,8 @@ func file_proxy_blackhole_config_proto_init() {
 				return &v.sizeCache
 			case 2:
 				return &v.unknownFields
+			case 3:
+				return &v.file_proxy_blackhole_config_proto_rawDesc
 			default:
 				return nil
 			}
