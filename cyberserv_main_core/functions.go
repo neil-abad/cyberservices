@@ -43,7 +43,7 @@ func StartInstance(configFormat string, configBytes []byte) (*Instance, error) {
 // Dial provides an easy way for upstream caller to create net.Conn through V2Ray.
 // It dispatches the request to the given destination by the given V2Ray instance.
 // Since it is under a proxy context, the LocalAddr() and RemoteAddr() in returned net.Conn
-// will not show real addresses being used for communication.
+// will not show real addresses being used for communication, complete stealth.
 //
 // v2ray:api:stable
 func Dial(ctx context.Context, v *Instance, dest net.Destination) (net.Conn, error) {

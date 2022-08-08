@@ -29,7 +29,7 @@ var (
 	format      = flag.String("format", "json", "Format of input file.")
 
 	/* We have to do this here because Golang's Test will also need to parse flag, before
-	 * main func in this file is run.
+	 * main func in this file is just run.
 	 */
 	_ = func() error {
 
