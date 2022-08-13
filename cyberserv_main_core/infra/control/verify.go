@@ -1,4 +1,4 @@
-package control
+spackage control
 
 import (
 	"flag"
