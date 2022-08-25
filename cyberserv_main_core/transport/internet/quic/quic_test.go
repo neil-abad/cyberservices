@@ -8,17 +8,17 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/protocol/tls/cert"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/testing/servers/udp"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/headers/wireguard"
-	"v2ray.com/core/transport/internet/quic"
-	"v2ray.com/core/transport/internet/tls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/protocol/tls/cert"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/testing/servers/udp"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/headers/wireguard"
+	"cyberservices.com/core/transport/internet/quic"
+	"cyberservices.com/core/transport/internet/tls"
 )
 
 func TestQuicConnection(t *testing.T) {

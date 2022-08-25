@@ -4,7 +4,7 @@ import (
 	"flag"
 	"github.com/xiaokangwang/VSign/signerVerify"
 	"os"
-	"v2ray.com/core/common"
+	"cyberservices.com/core/common"
 )
 
 type VerifyCommand struct{}
@@ -18,7 +18,7 @@ func (c *VerifyCommand) Description() Description {
 		Short: "Verify if a binary is officially signed.",
 		Usage: []string{
 			"v2ctl verify --sig=<sig-file> file...",
-			"Verify the file officially signed by V2Ray.",
+			"Verify the file officially signed by cyberservices.",
 		},
 	}
 }
@@ -54,7 +54,7 @@ func (c *VerifyCommand) Execute(args []string) error {
 		return nil
 	}
 
-	return newError("file is not officially signed by V2Ray").Base(err)
+	return newError("file is not officially signed by Project CS").Base(err)
 }
 
 func init() {

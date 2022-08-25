@@ -3,7 +3,7 @@ package mux_test
 import (
 	"testing"
 
-	. "v2ray.com/core/common/mux"
+	. "cyberservices.com/core/common/mux"
 )
 
 func TestSessionManagerAdd(t *testing.T) {

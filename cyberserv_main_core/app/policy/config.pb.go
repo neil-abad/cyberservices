@@ -581,28 +581,28 @@ func file_app_policy_config_proto_rawDescGZIP() []byte {
 
 var file_app_policy_config_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_app_policy_config_proto_goTypes = []interface{}{
-	(*Second)(nil),             // 0: v2ray.core.app.policy.Second
-	(*Policy)(nil),             // 1: v2ray.core.app.policy.Policy
-	(*SystemPolicy)(nil),       // 2: v2ray.core.app.policy.SystemPolicy
-	(*Config)(nil),             // 3: v2ray.core.app.policy.Config
-	(*Policy_Timeout)(nil),     // 4: v2ray.core.app.policy.Policy.Timeout
-	(*Policy_Stats)(nil),       // 5: v2ray.core.app.policy.Policy.Stats
-	(*Policy_Buffer)(nil),      // 6: v2ray.core.app.policy.Policy.Buffer
-	(*SystemPolicy_Stats)(nil), // 7: v2ray.core.app.policy.SystemPolicy.Stats
-	nil,                        // 8: v2ray.core.app.policy.Config.LevelEntry
+	(*Second)(nil),             // 0: cyberservices.core.app.policy.Second
+	(*Policy)(nil),             // 1: cyberservices.core.app.policy.Policy
+	(*SystemPolicy)(nil),       // 2: cyberservices.core.app.policy.SystemPolicy
+	(*Config)(nil),             // 3: cyberservices.core.app.policy.Config
+	(*Policy_Timeout)(nil),     // 4: cyberservices.core.app.policy.Policy.Timeout
+	(*Policy_Stats)(nil),       // 5: cyberservices.core.app.policy.Policy.Stats
+	(*Policy_Buffer)(nil),      // 6: cyberservices.core.app.policy.Policy.Buffer
+	(*SystemPolicy_Stats)(nil), // 7: cyberservices.core.app.policy.SystemPolicy.Stats
+	nil,                        // 8: cyberservices.core.app.policy.Config.LevelEntry
 }
 var file_app_policy_config_proto_depIdxs = []int32{
-	4,  // 0: v2ray.core.app.policy.Policy.timeout:type_name -> v2ray.core.app.policy.Policy.Timeout
-	5,  // 1: v2ray.core.app.policy.Policy.stats:type_name -> v2ray.core.app.policy.Policy.Stats
-	6,  // 2: v2ray.core.app.policy.Policy.buffer:type_name -> v2ray.core.app.policy.Policy.Buffer
-	7,  // 3: v2ray.core.app.policy.SystemPolicy.stats:type_name -> v2ray.core.app.policy.SystemPolicy.Stats
-	8,  // 4: v2ray.core.app.policy.Config.level:type_name -> v2ray.core.app.policy.Config.LevelEntry
-	2,  // 5: v2ray.core.app.policy.Config.system:type_name -> v2ray.core.app.policy.SystemPolicy
-	0,  // 6: v2ray.core.app.policy.Policy.Timeout.handshake:type_name -> v2ray.core.app.policy.Second
-	0,  // 7: v2ray.core.app.policy.Policy.Timeout.connection_idle:type_name -> v2ray.core.app.policy.Second
-	0,  // 8: v2ray.core.app.policy.Policy.Timeout.uplink_only:type_name -> v2ray.core.app.policy.Second
-	0,  // 9: v2ray.core.app.policy.Policy.Timeout.downlink_only:type_name -> v2ray.core.app.policy.Second
-	1,  // 10: v2ray.core.app.policy.Config.LevelEntry.value:type_name -> v2ray.core.app.policy.Policy
+	4,  // 0: cyberservices.core.app.policy.Policy.timeout:type_name -> cyberservices.core.app.policy.Policy.Timeout
+	5,  // 1: cyberservices.core.app.policy.Policy.stats:type_name -> cyberservices.core.app.policy.Policy.Stats
+	6,  // 2: cyberservices.core.app.policy.Policy.buffer:type_name -> cyberservices.core.app.policy.Policy.Buffer
+	7,  // 3: cyberservices.core.app.policy.SystemPolicy.stats:type_name -> cyberservices.core.app.policy.SystemPolicy.Stats
+	8,  // 4: cyberservices.core.app.policy.Config.level:type_name -> cyberservices.core.app.policy.Config.LevelEntry
+	2,  // 5: cyberservices.core.app.policy.Config.system:type_name -> cyberservices.core.app.policy.SystemPolicy
+	0,  // 6: cyberservices.core.app.policy.Policy.Timeout.handshake:type_name -> cyberservices.core.app.policy.Second
+	0,  // 7: cyberservices.core.app.policy.Policy.Timeout.connection_idle:type_name -> cyberservices.core.app.policy.Second
+	0,  // 8: cyberservices.core.app.policy.Policy.Timeout.uplink_only:type_name -> cyberservices.core.app.policy.Second
+	0,  // 9: cyberservices.core.app.policy.Policy.Timeout.downlink_only:type_name -> cyberservices.core.app.policy.Second
+	1,  // 10: cyberservices.core.app.policy.Config.LevelEntry.value:type_name -> cyberservices.core.app.policy.Policy
 	11, // [11:11] is the sub-list for method output_type
 	11, // [11:11] is the sub-list for method input_type
 	11, // [11:11] is the sub-list for extension type_name

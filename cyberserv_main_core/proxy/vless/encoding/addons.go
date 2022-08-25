@@ -7,9 +7,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/proxy/vless"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/proxy/vless"
 )
 
 func EncodeHeaderAddons(buffer *buf.Buffer, addons *Addons) error {

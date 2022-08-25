@@ -181,13 +181,13 @@ func file_app_log_command_config_proto_rawDescGZIP() []byte {
 
 var file_app_log_command_config_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_app_log_command_config_proto_goTypes = []interface{}{
-	(*Config)(nil),                // 0: v2ray.core.app.log.command.Config
-	(*RestartLoggerRequest)(nil),  // 1: v2ray.core.app.log.command.RestartLoggerRequest
-	(*RestartLoggerResponse)(nil), // 2: v2ray.core.app.log.command.RestartLoggerResponse
+	(*Config)(nil),                // 0: cyberservices.core.app.log.command.Config
+	(*RestartLoggerRequest)(nil),  // 1: cyberservices.core.app.log.command.RestartLoggerRequest
+	(*RestartLoggerResponse)(nil), // 2: cyberservices.core.app.log.command.RestartLoggerResponse
 }
 var file_app_log_command_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.app.log.command.LoggerService.RestartLogger:input_type -> v2ray.core.app.log.command.RestartLoggerRequest
-	2, // 1: v2ray.core.app.log.command.LoggerService.RestartLogger:output_type -> v2ray.core.app.log.command.RestartLoggerResponse
+	1, // 0: cyberservices.core.app.log.command.LoggerService.RestartLogger:input_type -> cyberservices.core.app.log.command.RestartLoggerRequest
+	2, // 1: cyberservices.core.app.log.command.LoggerService.RestartLogger:output_type -> cyberservices.core.app.log.command.RestartLoggerResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

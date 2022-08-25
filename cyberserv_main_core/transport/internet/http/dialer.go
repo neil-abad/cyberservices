@@ -10,12 +10,12 @@ import (
 	"sync"
 
 	"golang.org/x/net/http2"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/pipe"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/tls"
+	"cyberservices.com/core/transport/pipe"
 )
 
 var (

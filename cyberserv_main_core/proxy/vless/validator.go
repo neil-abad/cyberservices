@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/uuid"
 )
 
 type Validator struct {

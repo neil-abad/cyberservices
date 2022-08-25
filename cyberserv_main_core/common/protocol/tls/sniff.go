@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"v2ray.com/core/common"
+	"cyberservices.com/core/common"
 )
 
 type SniffHeader struct {

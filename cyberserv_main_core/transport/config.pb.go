@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	internet "v2ray.com/core/transport/internet"
+	internet "cyberservices.com/core/transport/internet"
 )
 
 const (
@@ -27,7 +27,7 @@ const (
 const _ = proto.ProtoPackageIsVersion4
 
 // Global transport settings. This affects all type of connections that go
-// through V2Ray. Deprecated. Use each settings in StreamConfig.
+// through cyberservices. Deprecated. Use each settings in StreamConfig.
 type Config struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -111,11 +111,11 @@ func file_transport_config_proto_rawDescGZIP() []byte {
 
 var file_transport_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_transport_config_proto_goTypes = []interface{}{
-	(*Config)(nil),                   // 0: v2ray.core.transport.Config
-	(*internet.TransportConfig)(nil), // 1: v2ray.core.transport.internet.TransportConfig
+	(*Config)(nil),                   // 0: cyberservices.core.transport.Config
+	(*internet.TransportConfig)(nil), // 1: cyberservices.core.transport.internet.TransportConfig
 }
 var file_transport_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.transport.Config.transport_settings:type_name -> v2ray.core.transport.internet.TransportConfig
+	1, // 0: cyberservices.core.transport.Config.transport_settings:type_name -> cyberservices.core.transport.internet.TransportConfig
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

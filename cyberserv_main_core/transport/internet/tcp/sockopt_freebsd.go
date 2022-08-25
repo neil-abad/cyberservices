@@ -4,8 +4,8 @@
 package tcp
 
 import (
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/transport/internet"
 )
 
 // GetOriginalDestination from tcp conn

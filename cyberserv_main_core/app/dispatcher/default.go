@@ -2,7 +2,7 @@
 
 package dispatcher
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
@@ -10,20 +10,20 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/features/policy"
-	"v2ray.com/core/features/routing"
-	routing_session "v2ray.com/core/features/routing/session"
-	"v2ray.com/core/features/stats"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/pipe"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/log"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/features/outbound"
+	"cyberservices.com/core/features/policy"
+	"cyberservices.com/core/features/routing"
+	routing_session "cyberservices.com/core/features/routing/session"
+	"cyberservices.com/core/features/stats"
+	"cyberservices.com/core/transport"
+	"cyberservices.com/core/transport/pipe"
 )
 
 var (

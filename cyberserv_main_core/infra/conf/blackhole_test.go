@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"v2ray.com/core/common/serial"
-	. "v2ray.com/core/infra/conf"
-	"v2ray.com/core/proxy/blackhole"
+	"cyberservices.com/core/common/serial"
+	. "cyberservices.com/core/infra/conf"
+	"cyberservices.com/core/proxy/blackhole"
 )
 
 func TestHTTPResponseJSON(t *testing.T) {

@@ -3,9 +3,9 @@ package protocol
 import (
 	"runtime"
 
-	"v2ray.com/core/common/bitmask"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/uuid"
+	"cyberservices.com/core/common/bitmask"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/uuid"
 )
 
 // RequestCommand is a custom command in a proxy request.

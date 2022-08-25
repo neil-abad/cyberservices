@@ -2,21 +2,21 @@
 
 package reverse
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/features/routing"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/errors"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/features/outbound"
+	"cyberservices.com/core/features/routing"
 )
 
 const (
-	internalDomain = "reverse.internal.v2ray.com"
+	internalDomain = "reverse.internal.cyberservices.com"
 )
 
 func isDomain(dest net.Destination, domain string) bool {

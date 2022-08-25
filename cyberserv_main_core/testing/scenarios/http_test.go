@@ -12,16 +12,16 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/proxy/freedom"
-	v2http "v2ray.com/core/proxy/http"
-	v2httptest "v2ray.com/core/testing/servers/http"
-	"v2ray.com/core/testing/servers/tcp"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/proxy/freedom"
+	v2http "cyberservices.com/core/proxy/http"
+	v2httptest "cyberservices.com/core/testing/servers/http"
+	"cyberservices.com/core/testing/servers/tcp"
 )
 
 func TestHttpConformance(t *testing.T) {

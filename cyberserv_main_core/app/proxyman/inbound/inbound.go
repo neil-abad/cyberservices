@@ -1,17 +1,17 @@
 package inbound
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
 	"sync"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/features/inbound"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/features/inbound"
 )
 
 // Manager is to manage all inbound handlers.

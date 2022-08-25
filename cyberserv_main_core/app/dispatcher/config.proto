@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.dispatcher;
-option csharp_namespace = "V2Ray.Core.App.Dispatcher";
-option go_package = "v2ray.com/core/app/dispatcher";
-option java_package = "com.v2ray.core.app.dispatcher";
+package cyberservices.core.app.dispatcher;
+option csharp_namespace = "cyberservices.Core.App.Dispatcher";
+option go_package = "cyberservices.com/core/app/dispatcher";
+option java_package = "com.cyberservices.core.app.dispatcher";
 option java_multiple_files = true;
 
 message SessionConfig {

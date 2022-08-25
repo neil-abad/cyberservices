@@ -2,7 +2,7 @@
 
 package commander
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
@@ -11,13 +11,13 @@ import (
 
 	"google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/signal/done"
-	"v2ray.com/core/features/outbound"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/signal/done"
+	"cyberservices.com/core/features/outbound"
 )
 
-// Commander is a V2Ray feature that provides gRPC methods to external clients.
+// Commander is a Project CS feature that provides gRPC methods to external clients.
 type Commander struct {
 	sync.Mutex
 	server   *grpc.Server

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 	"time"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/task"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/task"
 )
 
 func TestGenerate(t *testing.T) {
@@ -20,8 +20,8 @@ func TestGenerate(t *testing.T) {
 }
 
 func generate(domainNames []string, isCA bool, jsonOutput bool, fileOutput string) error {
-	commonName := "V2Ray Root CA"
-	organization := "V2Ray Inc"
+	commonName := "Project CS Root CA"
+	organization := "Project CS Inc"
 
 	expire := time.Hour * 3
 

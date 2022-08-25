@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RELBODY="https://github.com/v2fly/v2ray-core/commit/${RELEASE_SHA}"
+RELBODY="https://github.com/v2fly/Project CS-core/commit/${RELEASE_SHA}"
 JSON_DATA=$(echo "{}" | jq -c ".tag_name=\"${RELEASE_TAG}\"")
 JSON_DATA=$(echo ${JSON_DATA} | jq -c ".prerelease=${PRERELEASE}")
 JSON_DATA=$(echo ${JSON_DATA} | jq -c ".body=\"${RELBODY}\"")
@@ -34,29 +34,29 @@ pushd ${ART_ROOT}
 {
   go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen version ${RELEASE_TAG}
   go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen project "v2flyunstable"
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-macos-64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-windows-64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-windows-32.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-windows-arm32-v7a.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-32.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-arm64-v8a.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-arm32-v7a.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-arm32-v6.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-arm32-v5.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-mips64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-mips64le.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-mips32.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-mips32le.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-ppc64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-ppc64le.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-riscv64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-linux-s390x.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-freebsd-64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-freebsd-32.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-openbsd-64.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-openbsd-32.zip
-  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file v2ray-dragonfly-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-macos-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-windows-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-windows-32.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-windows-arm32-v7a.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-32.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-arm64-v8a.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-arm32-v7a.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-arm32-v6.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-arm32-v5.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-mips64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-mips64le.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-mips32.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-mips32le.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-ppc64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-ppc64le.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-riscv64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-linux-s390x.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-freebsd-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-freebsd-32.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-openbsd-64.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-openbsd-32.zip
+  go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen file Project CS-dragonfly-64.zip
 } >Release.unsigned.unsorted
   go run github.com/xiaokangwang/V2BuildAssist/v2buildutil gen sort < Release.unsigned.unsorted > Release.unsigned
 
@@ -68,27 +68,27 @@ pushd ${ART_ROOT}
   go run github.com/xiaokangwang/V2BuildAssist/v2buildutil post commit "${RELEASE_SHA}" < buildcomment
 popd
 
-upload ${ART_ROOT}/v2ray-macos-64.zip
-upload ${ART_ROOT}/v2ray-windows-64.zip
-upload ${ART_ROOT}/v2ray-windows-32.zip
-upload ${ART_ROOT}/v2ray-windows-arm32-v7a.zip
-upload ${ART_ROOT}/v2ray-linux-64.zip
-upload ${ART_ROOT}/v2ray-linux-32.zip
-upload ${ART_ROOT}/v2ray-linux-arm64-v8a.zip
-upload ${ART_ROOT}/v2ray-linux-arm32-v7a.zip
-upload ${ART_ROOT}/v2ray-linux-arm32-v6.zip
-upload ${ART_ROOT}/v2ray-linux-arm32-v5.zip
-upload ${ART_ROOT}/v2ray-linux-mips64.zip
-upload ${ART_ROOT}/v2ray-linux-mips64le.zip
-upload ${ART_ROOT}/v2ray-linux-mips32.zip
-upload ${ART_ROOT}/v2ray-linux-mips32le.zip
-upload ${ART_ROOT}/v2ray-linux-ppc64.zip
-upload ${ART_ROOT}/v2ray-linux-ppc64le.zip
-upload ${ART_ROOT}/v2ray-linux-riscv64.zip
-upload ${ART_ROOT}/v2ray-linux-s390x.zip
-upload ${ART_ROOT}/v2ray-freebsd-64.zip
-upload ${ART_ROOT}/v2ray-freebsd-32.zip
-upload ${ART_ROOT}/v2ray-openbsd-64.zip
-upload ${ART_ROOT}/v2ray-openbsd-32.zip
-upload ${ART_ROOT}/v2ray-dragonfly-64.zip
+upload ${ART_ROOT}/Project CS-macos-64.zip
+upload ${ART_ROOT}/Project CS-windows-64.zip
+upload ${ART_ROOT}/Project CS-windows-32.zip
+upload ${ART_ROOT}/Project CS-windows-arm32-v7a.zip
+upload ${ART_ROOT}/Project CS-linux-64.zip
+upload ${ART_ROOT}/Project CS-linux-32.zip
+upload ${ART_ROOT}/Project CS-linux-arm64-v8a.zip
+upload ${ART_ROOT}/Project CS-linux-arm32-v7a.zip
+upload ${ART_ROOT}/Project CS-linux-arm32-v6.zip
+upload ${ART_ROOT}/Project CS-linux-arm32-v5.zip
+upload ${ART_ROOT}/Project CS-linux-mips64.zip
+upload ${ART_ROOT}/Project CS-linux-mips64le.zip
+upload ${ART_ROOT}/Project CS-linux-mips32.zip
+upload ${ART_ROOT}/Project CS-linux-mips32le.zip
+upload ${ART_ROOT}/Project CS-linux-ppc64.zip
+upload ${ART_ROOT}/Project CS-linux-ppc64le.zip
+upload ${ART_ROOT}/Project CS-linux-riscv64.zip
+upload ${ART_ROOT}/Project CS-linux-s390x.zip
+upload ${ART_ROOT}/Project CS-freebsd-64.zip
+upload ${ART_ROOT}/Project CS-freebsd-32.zip
+upload ${ART_ROOT}/Project CS-openbsd-64.zip
+upload ${ART_ROOT}/Project CS-openbsd-32.zip
+upload ${ART_ROOT}/Project CS-dragonfly-64.zip
 upload ${ART_ROOT}/Release.unsigned

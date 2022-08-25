@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.shadowsocks;
-option csharp_namespace = "V2Ray.Core.Proxy.Shadowsocks";
-option go_package = "v2ray.com/core/proxy/shadowsocks";
-option java_package = "com.v2ray.core.proxy.shadowsocks";
+package cyberservices.core.proxy.shadowsocks;
+option csharp_namespace = "cyberservices.Core.Proxy.Shadowsocks";
+option go_package = "cyberservices.com/core/proxy/shadowsocks";
+option java_package = "com.cyberservices.core.proxy.shadowsocks";
 option java_multiple_files = true;
 
 import "common/net/network.proto";
@@ -31,10 +31,10 @@ message ServerConfig {
   // UdpEnabled specified whether or not to enable UDP for Shadowsocks.
   // Deprecated. Use 'network' field.
   bool udp_enabled = 1 [deprecated = true];
-  v2ray.core.common.protocol.User user = 2;
-  repeated v2ray.core.common.net.Network network = 3;
+  cyberservices.core.common.protocol.User user = 2;
+  repeated cyberservices.core.common.net.Network network = 3;
 }
 
 message ClientConfig {
-  repeated v2ray.core.common.protocol.ServerEndpoint server = 1;
+  repeated cyberservices.core.common.protocol.ServerEndpoint server = 1;
 }

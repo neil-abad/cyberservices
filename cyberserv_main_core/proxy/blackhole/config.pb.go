@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	serial "v2ray.com/core/common/serial"
+	serial "cybersevices.com/core/common/serial"
 )
 
 const (
@@ -188,13 +188,13 @@ func file_proxy_blackhole_config_proto_rawDescGZIP() []byte {
 
 var file_proxy_blackhole_config_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_proxy_blackhole_config_proto_goTypes = []interface{}{
-	(*NoneResponse)(nil),        // 0: v2ray.core.proxy.blackhole.NoneResponse
-	(*HTTPResponse)(nil),        // 1: v2ray.core.proxy.blackhole.HTTPResponse
-	(*Config)(nil),              // 2: v2ray.core.proxy.blackhole.Config
-	(*serial.TypedMessage)(nil), // 3: v2ray.core.common.serial.TypedMessage
+	(*NoneResponse)(nil),        // 0: cyberservices.core.proxy.blackhole.NoneResponse
+	(*HTTPResponse)(nil),        // 1: cyberservices.core.proxy.blackhole.HTTPResponse
+	(*Config)(nil),              // 2: cyberservices.core.proxy.blackhole.Config
+	(*serial.TypedMessage)(nil), // 3: cyberservices.core.common.serial.TypedMessage
 }
 var file_proxy_blackhole_config_proto_depIdxs = []int32{
-	3, // 0: v2ray.core.proxy.blackhole.Config.response:type_name -> v2ray.core.common.serial.TypedMessage
+	3, // 0: cyberservices.core.proxy.blackhole.Config.response:type_name -> cyberservices.core.common.serial.TypedMessage
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

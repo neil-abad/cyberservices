@@ -11,9 +11,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/common/signal/semaphore"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/signal"
+	"cyberservices.com/core/common/signal/semaphore"
 )
 
 var (

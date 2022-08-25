@@ -1,1 +1,1 @@
-Please Move to https://github.com/v2fly/v2ray-core/pulls
+Please Move to https://github.com/v2fly/Project CS-core/pulls

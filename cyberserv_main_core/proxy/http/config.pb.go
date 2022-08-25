@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "cyberservices.com/core/common/protocol"
 )
 
 const (
@@ -260,15 +260,15 @@ func file_proxy_http_config_proto_rawDescGZIP() []byte {
 
 var file_proxy_http_config_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_proxy_http_config_proto_goTypes = []interface{}{
-	(*Account)(nil),                 // 0: v2ray.core.proxy.http.Account
-	(*ServerConfig)(nil),            // 1: v2ray.core.proxy.http.ServerConfig
-	(*ClientConfig)(nil),            // 2: v2ray.core.proxy.http.ClientConfig
-	nil,                             // 3: v2ray.core.proxy.http.ServerConfig.AccountsEntry
-	(*protocol.ServerEndpoint)(nil), // 4: v2ray.core.common.protocol.ServerEndpoint
+	(*Account)(nil),                 // 0: cyberservices.core.proxy.http.Account
+	(*ServerConfig)(nil),            // 1: cyberservices.core.proxy.http.ServerConfig
+	(*ClientConfig)(nil),            // 2: cyberservices.core.proxy.http.ClientConfig
+	nil,                             // 3: cyberservices.core.proxy.http.ServerConfig.AccountsEntry
+	(*protocol.ServerEndpoint)(nil), // 4: cyberservices.core.common.protocol.ServerEndpoint
 }
 var file_proxy_http_config_proto_depIdxs = []int32{
-	3, // 0: v2ray.core.proxy.http.ServerConfig.accounts:type_name -> v2ray.core.proxy.http.ServerConfig.AccountsEntry
-	4, // 1: v2ray.core.proxy.http.ClientConfig.server:type_name -> v2ray.core.common.protocol.ServerEndpoint
+	3, // 0: cyberservices.core.proxy.http.ServerConfig.accounts:type_name -> cyberservices.core.proxy.http.ServerConfig.AccountsEntry
+	4, // 1: cyberservices.core.proxy.http.ClientConfig.server:type_name -> cyberservices.core.common.protocol.ServerEndpoint
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

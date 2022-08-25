@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	. "v2ray.com/core/common/retry"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/errors"
+	. "cyberservices.com/core/common/retry"
 )
 
 var (

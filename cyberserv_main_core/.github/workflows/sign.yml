@@ -6,7 +6,7 @@ on:
 
 jobs:
   sign:
-    if: github.repository != 'v2ray/v2ray-core'
+    if: github.repository != 'Project CS/Project CS-core'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout default branch

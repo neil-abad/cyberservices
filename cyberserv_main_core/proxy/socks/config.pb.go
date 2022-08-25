@@ -12,8 +12,8 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	net "v2ray.com/core/common/net"
-	protocol "v2ray.com/core/common/protocol"
+	net "cyberservices.com/core/common/net"
+	protocol "cyberservices.com/core/common/protocol"
 )
 
 const (
@@ -138,7 +138,7 @@ type ServerConfig struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AuthType   AuthType          `protobuf:"varint,1,opt,name=auth_type,json=authType,proto3,enum=v2ray.core.proxy.socks.AuthType" json:"auth_type,omitempty"`
+	AuthType   AuthType          `protobuf:"varint,1,opt,name=auth_type,json=authType,proto3,enum=cyberservices.core.proxy.socks.AuthType" json:"auth_type,omitempty"`
 	Accounts   map[string]string `protobuf:"bytes,2,rep,name=accounts,proto3" json:"accounts,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	Address    *net.IPOrDomain   `protobuf:"bytes,3,opt,name=address,proto3" json:"address,omitempty"`
 	UdpEnabled bool              `protobuf:"varint,4,opt,name=udp_enabled,json=udpEnabled,proto3" json:"udp_enabled,omitempty"`
@@ -340,19 +340,19 @@ func file_proxy_socks_config_proto_rawDescGZIP() []byte {
 var file_proxy_socks_config_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_proxy_socks_config_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_proxy_socks_config_proto_goTypes = []interface{}{
-	(AuthType)(0),                   // 0: v2ray.core.proxy.socks.AuthType
-	(*Account)(nil),                 // 1: v2ray.core.proxy.socks.Account
-	(*ServerConfig)(nil),            // 2: v2ray.core.proxy.socks.ServerConfig
-	(*ClientConfig)(nil),            // 3: v2ray.core.proxy.socks.ClientConfig
-	nil,                             // 4: v2ray.core.proxy.socks.ServerConfig.AccountsEntry
-	(*net.IPOrDomain)(nil),          // 5: v2ray.core.common.net.IPOrDomain
-	(*protocol.ServerEndpoint)(nil), // 6: v2ray.core.common.protocol.ServerEndpoint
+	(AuthType)(0),                   // 0: cyberservices.core.proxy.socks.AuthType
+	(*Account)(nil),                 // 1: cyberservices.core.proxy.socks.Account
+	(*ServerConfig)(nil),            // 2: cyberservices.core.proxy.socks.ServerConfig
+	(*ClientConfig)(nil),            // 3: cyberservices.core.proxy.socks.ClientConfig
+	nil,                             // 4: cyberservices.core.proxy.socks.ServerConfig.AccountsEntry
+	(*net.IPOrDomain)(nil),          // 5: cyberservices.core.common.net.IPOrDomain
+	(*protocol.ServerEndpoint)(nil), // 6: cyberservices.core.common.protocol.ServerEndpoint
 }
 var file_proxy_socks_config_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.proxy.socks.ServerConfig.auth_type:type_name -> v2ray.core.proxy.socks.AuthType
-	4, // 1: v2ray.core.proxy.socks.ServerConfig.accounts:type_name -> v2ray.core.proxy.socks.ServerConfig.AccountsEntry
-	5, // 2: v2ray.core.proxy.socks.ServerConfig.address:type_name -> v2ray.core.common.net.IPOrDomain
-	6, // 3: v2ray.core.proxy.socks.ClientConfig.server:type_name -> v2ray.core.common.protocol.ServerEndpoint
+	0, // 0: cyberservices.core.proxy.socks.ServerConfig.auth_type:type_name -> cyberservices.core.proxy.socks.AuthType
+	4, // 1: cyberservices.core.proxy.socks.ServerConfig.accounts:type_name -> cyberservices.core.proxy.socks.ServerConfig.AccountsEntry
+	5, // 2: cyberservices.core.proxy.socks.ServerConfig.address:type_name -> cyberservices.core.common.net.IPOrDomain
+	6, // 3: cyberservices.core.proxy.socks.ClientConfig.server:type_name -> cyberservices.core.common.protocol.ServerEndpoint
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name

@@ -6,12 +6,12 @@ import (
 	"os"
 	"strings"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/app/stats"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/transport/internet/xtls"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/dispatcher"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/app/stats"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/transport/internet/xtls"
 )
 
 var (

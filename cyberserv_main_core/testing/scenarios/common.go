@@ -14,15 +14,15 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/retry"
-	"v2ray.com/core/common/serial"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/dispatcher"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/errors"
+	"cyberservices.com/core/common/log"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/retry"
+	"cyberservices.com/core/common/serial"
 )
 
 func xor(b []byte) []byte {
@@ -73,7 +73,7 @@ func InitializeServerConfigs(configs ...*core.Config) ([]*exec.Cmd, error) {
 }
 
 func InitializeServerConfig(config *core.Config) (*exec.Cmd, error) {
-	err := BuildV2Ray()
+	err := BuildProject CS()
 	if err != nil {
 		return nil, err
 	}
@@ -83,7 +83,7 @@ func InitializeServerConfig(config *core.Config) (*exec.Cmd, error) {
 	if err != nil {
 		return nil, err
 	}
-	proc := RunV2RayProtobuf(configBytes)
+	proc := RunProject CSProtobuf(configBytes)
 
 	if err := proc.Start(); err != nil {
 		return nil, err
@@ -101,14 +101,14 @@ func genTestBinaryPath() {
 	testBinaryPathGen.Do(func() {
 		var tempDir string
 		common.Must(retry.Timed(5, 100).On(func() error {
-			dir, err := ioutil.TempDir("", "v2ray")
+			dir, err := ioutil.TempDir("", "Project CS")
 			if err != nil {
 				return err
 			}
 			tempDir = dir
 			return nil
 		}))
-		file := filepath.Join(tempDir, "v2ray.test")
+		file := filepath.Join(tempDir, "cyberservices.test")
 		if runtime.GOOS == "windows" {
 			file += ".exe"
 		}
@@ -118,7 +118,7 @@ func genTestBinaryPath() {
 }
 
 func GetSourcePath() string {
-	return filepath.Join("v2ray.com", "core", "main")
+	return filepath.Join("cyberservices.com", "core", "main")
 }
 
 func CloseAllServers(servers []*exec.Cmd) {

@@ -5,11 +5,11 @@ package tls
 import (
 	"crypto/tls"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
 )
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 var (
 	_ buf.Writer = (*Conn)(nil)

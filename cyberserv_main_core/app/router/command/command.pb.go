@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	net "v2ray.com/core/common/net"
+	net "cyberservices.com/core/common/net"
 )
 
 const (
@@ -27,15 +27,15 @@ const (
 const _ = proto.ProtoPackageIsVersion4
 
 // RoutingContext is the context with information relative to routing process.
-// It conforms to the structure of v2ray.core.features.routing.Context and
-// v2ray.core.features.routing.Route.
+// It conforms to the structure of cyberservices.core.features.routing.Context and
+// cyberservices.core.features.routing.Route.
 type RoutingContext struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	InboundTag        string            `protobuf:"bytes,1,opt,name=InboundTag,proto3" json:"InboundTag,omitempty"`
-	Network           net.Network       `protobuf:"varint,2,opt,name=Network,proto3,enum=v2ray.core.common.net.Network" json:"Network,omitempty"`
+	Network           net.Network       `protobuf:"varint,2,opt,name=Network,proto3,enum=cyberservices.core.common.net.Network" json:"Network,omitempty"`
 	SourceIPs         [][]byte          `protobuf:"bytes,3,rep,name=SourceIPs,proto3" json:"SourceIPs,omitempty"`
 	TargetIPs         [][]byte          `protobuf:"bytes,4,rep,name=TargetIPs,proto3" json:"TargetIPs,omitempty"`
 	SourcePort        uint32            `protobuf:"varint,5,opt,name=SourcePort,proto3" json:"SourcePort,omitempty"`
@@ -165,7 +165,7 @@ func (x *RoutingContext) GetOutboundTag() string {
 }
 
 // SubscribeRoutingStatsRequest subscribes to routing statistics channel if
-// opened by v2ray-core.
+// opened by Project CS-core.
 // * FieldSelectors selects a subset of fields in routing statistics to return.
 // Valid selectors:
 //  - inbound: Selects connection's inbound tag.
@@ -436,21 +436,21 @@ func file_app_router_command_command_proto_rawDescGZIP() []byte {
 
 var file_app_router_command_command_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_app_router_command_command_proto_goTypes = []interface{}{
-	(*RoutingContext)(nil),               // 0: v2ray.core.app.router.command.RoutingContext
-	(*SubscribeRoutingStatsRequest)(nil), // 1: v2ray.core.app.router.command.SubscribeRoutingStatsRequest
-	(*TestRouteRequest)(nil),             // 2: v2ray.core.app.router.command.TestRouteRequest
-	(*Config)(nil),                       // 3: v2ray.core.app.router.command.Config
-	nil,                                  // 4: v2ray.core.app.router.command.RoutingContext.AttributesEntry
-	(net.Network)(0),                     // 5: v2ray.core.common.net.Network
+	(*RoutingContext)(nil),               // 0: cyberservices.core.app.router.command.RoutingContext
+	(*SubscribeRoutingStatsRequest)(nil), // 1: cyberservices.core.app.router.command.SubscribeRoutingStatsRequest
+	(*TestRouteRequest)(nil),             // 2: cyberservices.core.app.router.command.TestRouteRequest
+	(*Config)(nil),                       // 3: cyberservices.core.app.router.command.Config
+	nil,                                  // 4: cyberservices.core.app.router.command.RoutingContext.AttributesEntry
+	(net.Network)(0),                     // 5: cyberservices.core.common.net.Network
 }
 var file_app_router_command_command_proto_depIdxs = []int32{
-	5, // 0: v2ray.core.app.router.command.RoutingContext.Network:type_name -> v2ray.core.common.net.Network
-	4, // 1: v2ray.core.app.router.command.RoutingContext.Attributes:type_name -> v2ray.core.app.router.command.RoutingContext.AttributesEntry
-	0, // 2: v2ray.core.app.router.command.TestRouteRequest.RoutingContext:type_name -> v2ray.core.app.router.command.RoutingContext
-	1, // 3: v2ray.core.app.router.command.RoutingService.SubscribeRoutingStats:input_type -> v2ray.core.app.router.command.SubscribeRoutingStatsRequest
-	2, // 4: v2ray.core.app.router.command.RoutingService.TestRoute:input_type -> v2ray.core.app.router.command.TestRouteRequest
-	0, // 5: v2ray.core.app.router.command.RoutingService.SubscribeRoutingStats:output_type -> v2ray.core.app.router.command.RoutingContext
-	0, // 6: v2ray.core.app.router.command.RoutingService.TestRoute:output_type -> v2ray.core.app.router.command.RoutingContext
+	5, // 0: cyberservices.core.app.router.command.RoutingContext.Network:type_name -> cyberservices.core.common.net.Network
+	4, // 1: cyberservices.core.app.router.command.RoutingContext.Attributes:type_name -> cyberservices.core.app.router.command.RoutingContext.AttributesEntry
+	0, // 2: cyberservices.core.app.router.command.TestRouteRequest.RoutingContext:type_name -> cyberservices.core.app.router.command.RoutingContext
+	1, // 3: cyberservices.core.app.router.command.RoutingService.SubscribeRoutingStats:input_type -> cyberservices.core.app.router.command.SubscribeRoutingStatsRequest
+	2, // 4: cyberservices.core.app.router.command.RoutingService.TestRoute:input_type -> cyberservices.core.app.router.command.TestRouteRequest
+	0, // 5: cyberservices.core.app.router.command.RoutingService.SubscribeRoutingStats:output_type -> cyberservices.core.app.router.command.RoutingContext
+	0, // 6: cyberservices.core.app.router.command.RoutingService.TestRoute:output_type -> cyberservices.core.app.router.command.RoutingContext
 	5, // [5:7] is the sub-list for method output_type
 	3, // [3:5] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

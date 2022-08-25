@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
 )
 
 type version byte

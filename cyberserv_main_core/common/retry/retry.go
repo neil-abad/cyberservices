@@ -1,6 +1,6 @@
-package retry // import "v2ray.com/core/common/retry"
+package retry // import "cyberservices.com/core/common/retry"
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"time"

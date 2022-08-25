@@ -7,23 +7,23 @@ import (
 	"os"
 	"os/exec"
 
-	"v2ray.com/core/common/uuid"
+	"cyberservices.com/core/common/uuid"
 )
 
-func BuildV2Ray() error {
+func BuildProject CS() error {
 	genTestBinaryPath()
 	if _, err := os.Stat(testBinaryPath); err == nil {
 		return nil
 	}
 
-	cmd := exec.Command("go", "test", "-tags", "coverage coveragemain", "-coverpkg", "v2ray.com/core/...", "-c", "-o", testBinaryPath, GetSourcePath())
+	cmd := exec.Command("go", "test", "-tags", "coverage coveragemain", "-coverpkg", "cyberservices.com/core/...", "-c", "-o", testBinaryPath, GetSourcePath())
 	return cmd.Run()
 }
 
-func RunV2RayProtobuf(config []byte) *exec.Cmd {
+func RunProject CSProtobuf(config []byte) *exec.Cmd {
 	genTestBinaryPath()
 
-	covDir := os.Getenv("V2RAY_COV")
+	covDir := os.Getenv("Project CS_COV")
 	os.MkdirAll(covDir, os.ModeDir)
 	randomID := uuid.New()
 	profile := randomID.String() + ".out"

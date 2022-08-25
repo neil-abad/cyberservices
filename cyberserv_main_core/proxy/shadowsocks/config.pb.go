@@ -12,8 +12,8 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	net "v2ray.com/core/common/net"
-	protocol "v2ray.com/core/common/protocol"
+	net "cyberservices.com/core/common/net"
+	protocol "cyberservices.com/core/common/protocol"
 )
 
 const (
@@ -100,7 +100,7 @@ type Account struct {
 	unknownFields protoimpl.UnknownFields
 
 	Password   string     `protobuf:"bytes,1,opt,name=password,proto3" json:"password,omitempty"`
-	CipherType CipherType `protobuf:"varint,2,opt,name=cipher_type,json=cipherType,proto3,enum=v2ray.core.proxy.shadowsocks.CipherType" json:"cipher_type,omitempty"`
+	CipherType CipherType `protobuf:"varint,2,opt,name=cipher_type,json=cipherType,proto3,enum=cyberservices.core.proxy.shadowsocks.CipherType" json:"cipher_type,omitempty"`
 }
 
 func (x *Account) Reset() {
@@ -160,7 +160,7 @@ type ServerConfig struct {
 	// Deprecated: Do not use.
 	UdpEnabled bool           `protobuf:"varint,1,opt,name=udp_enabled,json=udpEnabled,proto3" json:"udp_enabled,omitempty"`
 	User       *protocol.User `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
-	Network    []net.Network  `protobuf:"varint,3,rep,packed,name=network,proto3,enum=v2ray.core.common.net.Network" json:"network,omitempty"`
+	Network    []net.Network  `protobuf:"varint,3,rep,packed,name=network,proto3,enum=cyberservices.core.common.net.Network" json:"network,omitempty"`
 }
 
 func (x *ServerConfig) Reset() {
@@ -334,19 +334,19 @@ func file_proxy_shadowsocks_config_proto_rawDescGZIP() []byte {
 var file_proxy_shadowsocks_config_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_proxy_shadowsocks_config_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_proxy_shadowsocks_config_proto_goTypes = []interface{}{
-	(CipherType)(0),                 // 0: v2ray.core.proxy.shadowsocks.CipherType
-	(*Account)(nil),                 // 1: v2ray.core.proxy.shadowsocks.Account
-	(*ServerConfig)(nil),            // 2: v2ray.core.proxy.shadowsocks.ServerConfig
-	(*ClientConfig)(nil),            // 3: v2ray.core.proxy.shadowsocks.ClientConfig
-	(*protocol.User)(nil),           // 4: v2ray.core.common.protocol.User
-	(net.Network)(0),                // 5: v2ray.core.common.net.Network
-	(*protocol.ServerEndpoint)(nil), // 6: v2ray.core.common.protocol.ServerEndpoint
+	(CipherType)(0),                 // 0: cyberservices.core.proxy.shadowsocks.CipherType
+	(*Account)(nil),                 // 1: cyberservices.core.proxy.shadowsocks.Account
+	(*ServerConfig)(nil),            // 2: cyberservices.core.proxy.shadowsocks.ServerConfig
+	(*ClientConfig)(nil),            // 3: cyberservices.core.proxy.shadowsocks.ClientConfig
+	(*protocol.User)(nil),           // 4: cyberservices.core.common.protocol.User
+	(net.Network)(0),                // 5: cyberservices.core.common.net.Network
+	(*protocol.ServerEndpoint)(nil), // 6: cyberservices.core.common.protocol.ServerEndpoint
 }
 var file_proxy_shadowsocks_config_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.proxy.shadowsocks.Account.cipher_type:type_name -> v2ray.core.proxy.shadowsocks.CipherType
-	4, // 1: v2ray.core.proxy.shadowsocks.ServerConfig.user:type_name -> v2ray.core.common.protocol.User
-	5, // 2: v2ray.core.proxy.shadowsocks.ServerConfig.network:type_name -> v2ray.core.common.net.Network
-	6, // 3: v2ray.core.proxy.shadowsocks.ClientConfig.server:type_name -> v2ray.core.common.protocol.ServerEndpoint
+	0, // 0: cyberservices.core.proxy.shadowsocks.Account.cipher_type:type_name -> cyberservices.core.proxy.shadowsocks.CipherType
+	4, // 1: cyberservices.core.proxy.shadowsocks.ServerConfig.user:type_name -> cyberservices.core.common.protocol.User
+	5, // 2: cyberservices.core.proxy.shadowsocks.ServerConfig.network:type_name -> cyberservices.core.common.net.Network
+	6, // 3: cyberservices.core.proxy.shadowsocks.ClientConfig.server:type_name -> cyberservices.core.common.protocol.ServerEndpoint
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name

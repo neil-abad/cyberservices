@@ -3,7 +3,7 @@ package trojan
 import (
 	"sync"
 
-	"v2ray.com/core/common/protocol"
+	"cyberservices.com/core/common/protocol"
 )
 
 // Validator stores valid trojan users

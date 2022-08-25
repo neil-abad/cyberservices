@@ -6,7 +6,7 @@ import (
 	"context"
 	"sync"
 
-	"v2ray.com/core/common"
+	"cyberservices.com/core/common"
 )
 
 // Channel is an implementation of stats.Channel.

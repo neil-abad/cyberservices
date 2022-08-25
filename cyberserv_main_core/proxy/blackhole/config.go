@@ -1,8 +1,8 @@
 package blackhole
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
 )
 
 const (

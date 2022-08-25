@@ -76,7 +76,7 @@ type Control struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	State  Control_State `protobuf:"varint,1,opt,name=state,proto3,enum=v2ray.core.app.reverse.Control_State" json:"state,omitempty"`
+	State  Control_State `protobuf:"varint,1,opt,name=state,proto3,enum=cyberservices.core.app.reverse.Control_State" json:"state,omitempty"`
 	Random []byte        `protobuf:"bytes,99,opt,name=random,proto3" json:"random,omitempty"`
 }
 
@@ -346,16 +346,16 @@ func file_app_reverse_config_proto_rawDescGZIP() []byte {
 var file_app_reverse_config_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_app_reverse_config_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_app_reverse_config_proto_goTypes = []interface{}{
-	(Control_State)(0),   // 0: v2ray.core.app.reverse.Control.State
-	(*Control)(nil),      // 1: v2ray.core.app.reverse.Control
-	(*BridgeConfig)(nil), // 2: v2ray.core.app.reverse.BridgeConfig
-	(*PortalConfig)(nil), // 3: v2ray.core.app.reverse.PortalConfig
-	(*Config)(nil),       // 4: v2ray.core.app.reverse.Config
+	(Control_State)(0),   // 0: cyberservices.core.app.reverse.Control.State
+	(*Control)(nil),      // 1: cyberservices.core.app.reverse.Control
+	(*BridgeConfig)(nil), // 2: cyberservices.core.app.reverse.BridgeConfig
+	(*PortalConfig)(nil), // 3: cyberservices.core.app.reverse.PortalConfig
+	(*Config)(nil),       // 4: cyberservices.core.app.reverse.Config
 }
 var file_app_reverse_config_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.app.reverse.Control.state:type_name -> v2ray.core.app.reverse.Control.State
-	2, // 1: v2ray.core.app.reverse.Config.bridge_config:type_name -> v2ray.core.app.reverse.BridgeConfig
-	3, // 2: v2ray.core.app.reverse.Config.portal_config:type_name -> v2ray.core.app.reverse.PortalConfig
+	0, // 0: cyberservices.core.app.reverse.Control.state:type_name -> cyberservices.core.app.reverse.Control.State
+	2, // 1: cyberservices.core.app.reverse.Config.bridge_config:type_name -> cyberservices.core.app.reverse.BridgeConfig
+	3, // 2: cyberservices.core.app.reverse.Config.portal_config:type_name -> cyberservices.core.app.reverse.PortalConfig
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

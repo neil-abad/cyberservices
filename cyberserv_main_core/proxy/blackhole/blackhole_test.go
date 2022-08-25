@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/proxy/blackhole"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/pipe"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/proxy/blackhole"
+	"cyberservices.com/core/transport"
+	"cyberservices.com/core/transport/pipe"
 )
 
 func TestBlackholeHTTPResponse(t *testing.T) {

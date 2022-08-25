@@ -1,6 +1,6 @@
 def gen_mappings(os, arch, ver):
   return {
-    "v2ray_core/release/config": "",
-    "v2ray_core/main/" + os + "/" + arch + "/" + ver: "",
-    "v2ray_core/infra/control/main/" + os + "/" + arch + "/" + ver : "",
+    "Project CS_core/release/config": "",
+    "Project CS_core/main/" + os + "/" + arch + "/" + ver: "",
+    "Project CS_core/infra/control/main/" + os + "/" + arch + "/" + ver : "",
   }

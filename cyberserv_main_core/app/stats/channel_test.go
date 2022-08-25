@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	. "v2ray.com/core/app/stats"
-	"v2ray.com/core/common"
-	"v2ray.com/core/features/stats"
+	. "cyberservices.com/core/app/stats"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/features/stats"
 )
 
 func TestStatsChannel(t *testing.T) {

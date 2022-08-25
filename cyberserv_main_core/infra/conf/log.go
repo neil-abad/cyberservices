@@ -3,8 +3,8 @@ package conf
 import (
 	"strings"
 
-	"v2ray.com/core/app/log"
-	clog "v2ray.com/core/common/log"
+	"cyberservices.com/core/app/log"
+	clog "cyberservices.com/core/common/log"
 )
 
 func DefaultLogConfig() *log.Config {

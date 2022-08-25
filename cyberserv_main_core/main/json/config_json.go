@@ -1,15 +1,15 @@
 package json
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"io"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/infra/conf/serial"
-	"v2ray.com/core/main/confloader"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/cmdarg"
+	"cyberservices.com/core/infra/conf/serial"
+	"cyberservices.com/core/main/confloader"
 )
 
 func init() {

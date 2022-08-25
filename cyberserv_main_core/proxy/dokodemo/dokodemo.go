@@ -2,25 +2,25 @@
 
 package dokodemo
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
 	"sync/atomic"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/features/policy"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/log"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/common/signal"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/features/policy"
+	"cyberservices.com/core/features/routing"
+	"cyberservices.com/core/transport/internet"
 )
 
 func init() {

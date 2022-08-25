@@ -1,4 +1,4 @@
-module v2ray.com/core
+module cyberservices.com/core
 
 go 1.15
 

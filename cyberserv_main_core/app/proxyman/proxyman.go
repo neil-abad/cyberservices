@@ -4,7 +4,7 @@ package proxyman
 import (
 	"context"
 
-	"v2ray.com/core/common/session"
+	"cyberservices.com/core/common/session"
 )
 
 // ContextWithSniffingConfig is a wrapper of session.ContextWithContent.

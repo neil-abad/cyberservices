@@ -5,8 +5,8 @@ package websocket
 import (
 	"net/http"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/transport/internet"
 )
 
 const protocolName = "websocket"

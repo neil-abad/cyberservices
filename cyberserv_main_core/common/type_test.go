@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	. "v2ray.com/core/common"
+	. "cyberservices.com/core/common"
 )
 
 type TConfig struct {

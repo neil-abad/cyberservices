@@ -3,9 +3,9 @@
 package domainsocket
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/transport/internet"
 )
 
 const protocolName = "domainsocket"

@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"v2ray.com/core/common"
+	"cyberservices.com/core/common"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 		os.Exit(1)
 	}
 	pkg := filepath.Base(pwd)
-	if pkg == "v2ray-core" {
+	if pkg == "Project CS-core" {
 		pkg = "core"
 	}
 

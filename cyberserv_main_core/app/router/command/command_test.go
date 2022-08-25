@@ -10,13 +10,13 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/test/bufconn"
-	"v2ray.com/core/app/router"
-	. "v2ray.com/core/app/router/command"
-	"v2ray.com/core/app/stats"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/testing/mocks"
+	"cyberservices.com/core/app/router"
+	. "cyberservices.com/core/app/router/command"
+	"cyberservices.com/core/app/stats"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/features/routing"
+	"cyberservices.com/core/testing/mocks"
 )
 
 func TestServiceSubscribeRoutingStats(t *testing.T) {

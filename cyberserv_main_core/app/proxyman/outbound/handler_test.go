@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/policy"
-	. "v2ray.com/core/app/proxyman/outbound"
-	"v2ray.com/core/app/stats"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/policy"
+	. "cyberservices.com/core/app/proxyman/outbound"
+	"cyberservices.com/core/app/stats"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/features/outbound"
+	"cyberservices.com/core/proxy/freedom"
+	"cyberservices.com/core/transport/internet"
 )
 
 func TestInterfaces(t *testing.T) {
@@ -20,7 +20,7 @@ func TestInterfaces(t *testing.T) {
 	_ = (outbound.Manager)(new(Manager))
 }
 
-const v2rayKey core.V2rayKey = 1
+const Project CSKey core.Project CSKey = 1
 
 func TestOutboundWithoutStatCounter(t *testing.T) {
 	config := &core.Config{
@@ -38,7 +38,7 @@ func TestOutboundWithoutStatCounter(t *testing.T) {
 
 	v, _ := core.New(config)
 	v.AddFeature((outbound.Manager)(new(Manager)))
-	ctx := context.WithValue(context.Background(), v2rayKey, v)
+	ctx := context.WithValue(context.Background(), Project CSKey, v)
 	h, _ := NewHandler(ctx, &core.OutboundHandlerConfig{
 		Tag:           "tag",
 		ProxySettings: serial.ToTypedMessage(&freedom.Config{}),
@@ -67,7 +67,7 @@ func TestOutboundWithStatCounter(t *testing.T) {
 
 	v, _ := core.New(config)
 	v.AddFeature((outbound.Manager)(new(Manager)))
-	ctx := context.WithValue(context.Background(), v2rayKey, v)
+	ctx := context.WithValue(context.Background(), Project CSKey, v)
 	h, _ := NewHandler(ctx, &core.OutboundHandlerConfig{
 		Tag:           "tag",
 		ProxySettings: serial.ToTypedMessage(&freedom.Config{}),

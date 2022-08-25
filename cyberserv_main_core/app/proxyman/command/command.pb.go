@@ -12,9 +12,9 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	core "v2ray.com/core"
-	protocol "v2ray.com/core/common/protocol"
-	serial "v2ray.com/core/common/serial"
+	core "cyberservices.com/core"
+	protocol "cyberservices.com/core/common/protocol"
+	serial "cyberservices.com/core/common/serial"
 )
 
 const (
@@ -818,44 +818,44 @@ func file_app_proxyman_command_command_proto_rawDescGZIP() []byte {
 
 var file_app_proxyman_command_command_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_app_proxyman_command_command_proto_goTypes = []interface{}{
-	(*AddUserOperation)(nil),           // 0: v2ray.core.app.proxyman.command.AddUserOperation
-	(*RemoveUserOperation)(nil),        // 1: v2ray.core.app.proxyman.command.RemoveUserOperation
-	(*AddInboundRequest)(nil),          // 2: v2ray.core.app.proxyman.command.AddInboundRequest
-	(*AddInboundResponse)(nil),         // 3: v2ray.core.app.proxyman.command.AddInboundResponse
-	(*RemoveInboundRequest)(nil),       // 4: v2ray.core.app.proxyman.command.RemoveInboundRequest
-	(*RemoveInboundResponse)(nil),      // 5: v2ray.core.app.proxyman.command.RemoveInboundResponse
-	(*AlterInboundRequest)(nil),        // 6: v2ray.core.app.proxyman.command.AlterInboundRequest
-	(*AlterInboundResponse)(nil),       // 7: v2ray.core.app.proxyman.command.AlterInboundResponse
-	(*AddOutboundRequest)(nil),         // 8: v2ray.core.app.proxyman.command.AddOutboundRequest
-	(*AddOutboundResponse)(nil),        // 9: v2ray.core.app.proxyman.command.AddOutboundResponse
-	(*RemoveOutboundRequest)(nil),      // 10: v2ray.core.app.proxyman.command.RemoveOutboundRequest
-	(*RemoveOutboundResponse)(nil),     // 11: v2ray.core.app.proxyman.command.RemoveOutboundResponse
-	(*AlterOutboundRequest)(nil),       // 12: v2ray.core.app.proxyman.command.AlterOutboundRequest
-	(*AlterOutboundResponse)(nil),      // 13: v2ray.core.app.proxyman.command.AlterOutboundResponse
-	(*Config)(nil),                     // 14: v2ray.core.app.proxyman.command.Config
-	(*protocol.User)(nil),              // 15: v2ray.core.common.protocol.User
-	(*core.InboundHandlerConfig)(nil),  // 16: v2ray.core.InboundHandlerConfig
-	(*serial.TypedMessage)(nil),        // 17: v2ray.core.common.serial.TypedMessage
-	(*core.OutboundHandlerConfig)(nil), // 18: v2ray.core.OutboundHandlerConfig
+	(*AddUserOperation)(nil),           // 0: cyberservices.core.app.proxyman.command.AddUserOperation
+	(*RemoveUserOperation)(nil),        // 1: cyberservices.core.app.proxyman.command.RemoveUserOperation
+	(*AddInboundRequest)(nil),          // 2: cyberservices.core.app.proxyman.command.AddInboundRequest
+	(*AddInboundResponse)(nil),         // 3: cyberservices.core.app.proxyman.command.AddInboundResponse
+	(*RemoveInboundRequest)(nil),       // 4: cyberservices.core.app.proxyman.command.RemoveInboundRequest
+	(*RemoveInboundResponse)(nil),      // 5: cyberservices.core.app.proxyman.command.RemoveInboundResponse
+	(*AlterInboundRequest)(nil),        // 6: cyberservices.core.app.proxyman.command.AlterInboundRequest
+	(*AlterInboundResponse)(nil),       // 7: cyberservices.core.app.proxyman.command.AlterInboundResponse
+	(*AddOutboundRequest)(nil),         // 8: cyberservices.core.app.proxyman.command.AddOutboundRequest
+	(*AddOutboundResponse)(nil),        // 9: cyberservices.core.app.proxyman.command.AddOutboundResponse
+	(*RemoveOutboundRequest)(nil),      // 10: cyberservices.core.app.proxyman.command.RemoveOutboundRequest
+	(*RemoveOutboundResponse)(nil),     // 11: cyberservices.core.app.proxyman.command.RemoveOutboundResponse
+	(*AlterOutboundRequest)(nil),       // 12: cyberservices.core.app.proxyman.command.AlterOutboundRequest
+	(*AlterOutboundResponse)(nil),      // 13: cyberservices.core.app.proxyman.command.AlterOutboundResponse
+	(*Config)(nil),                     // 14: cyberservices.core.app.proxyman.command.Config
+	(*protocol.User)(nil),              // 15: cyberservices.core.common.protocol.User
+	(*core.InboundHandlerConfig)(nil),  // 16: cyberservices.core.InboundHandlerConfig
+	(*serial.TypedMessage)(nil),        // 17: cyberservices.core.common.serial.TypedMessage
+	(*core.OutboundHandlerConfig)(nil), // 18: cyberservices.core.OutboundHandlerConfig
 }
 var file_app_proxyman_command_command_proto_depIdxs = []int32{
-	15, // 0: v2ray.core.app.proxyman.command.AddUserOperation.user:type_name -> v2ray.core.common.protocol.User
-	16, // 1: v2ray.core.app.proxyman.command.AddInboundRequest.inbound:type_name -> v2ray.core.InboundHandlerConfig
-	17, // 2: v2ray.core.app.proxyman.command.AlterInboundRequest.operation:type_name -> v2ray.core.common.serial.TypedMessage
-	18, // 3: v2ray.core.app.proxyman.command.AddOutboundRequest.outbound:type_name -> v2ray.core.OutboundHandlerConfig
-	17, // 4: v2ray.core.app.proxyman.command.AlterOutboundRequest.operation:type_name -> v2ray.core.common.serial.TypedMessage
-	2,  // 5: v2ray.core.app.proxyman.command.HandlerService.AddInbound:input_type -> v2ray.core.app.proxyman.command.AddInboundRequest
-	4,  // 6: v2ray.core.app.proxyman.command.HandlerService.RemoveInbound:input_type -> v2ray.core.app.proxyman.command.RemoveInboundRequest
-	6,  // 7: v2ray.core.app.proxyman.command.HandlerService.AlterInbound:input_type -> v2ray.core.app.proxyman.command.AlterInboundRequest
-	8,  // 8: v2ray.core.app.proxyman.command.HandlerService.AddOutbound:input_type -> v2ray.core.app.proxyman.command.AddOutboundRequest
-	10, // 9: v2ray.core.app.proxyman.command.HandlerService.RemoveOutbound:input_type -> v2ray.core.app.proxyman.command.RemoveOutboundRequest
-	12, // 10: v2ray.core.app.proxyman.command.HandlerService.AlterOutbound:input_type -> v2ray.core.app.proxyman.command.AlterOutboundRequest
-	3,  // 11: v2ray.core.app.proxyman.command.HandlerService.AddInbound:output_type -> v2ray.core.app.proxyman.command.AddInboundResponse
-	5,  // 12: v2ray.core.app.proxyman.command.HandlerService.RemoveInbound:output_type -> v2ray.core.app.proxyman.command.RemoveInboundResponse
-	7,  // 13: v2ray.core.app.proxyman.command.HandlerService.AlterInbound:output_type -> v2ray.core.app.proxyman.command.AlterInboundResponse
-	9,  // 14: v2ray.core.app.proxyman.command.HandlerService.AddOutbound:output_type -> v2ray.core.app.proxyman.command.AddOutboundResponse
-	11, // 15: v2ray.core.app.proxyman.command.HandlerService.RemoveOutbound:output_type -> v2ray.core.app.proxyman.command.RemoveOutboundResponse
-	13, // 16: v2ray.core.app.proxyman.command.HandlerService.AlterOutbound:output_type -> v2ray.core.app.proxyman.command.AlterOutboundResponse
+	15, // 0: cyberservices.core.app.proxyman.command.AddUserOperation.user:type_name -> cyberservices.core.common.protocol.User
+	16, // 1: cyberservices.core.app.proxyman.command.AddInboundRequest.inbound:type_name -> cyberservices.core.InboundHandlerConfig
+	17, // 2: cyberservices.core.app.proxyman.command.AlterInboundRequest.operation:type_name -> cyberservices.core.common.serial.TypedMessage
+	18, // 3: cyberservices.core.app.proxyman.command.AddOutboundRequest.outbound:type_name -> cyberservices.core.OutboundHandlerConfig
+	17, // 4: cyberservices.core.app.proxyman.command.AlterOutboundRequest.operation:type_name -> cyberservices.core.common.serial.TypedMessage
+	2,  // 5: cyberservices.core.app.proxyman.command.HandlerService.AddInbound:input_type -> cyberservices.core.app.proxyman.command.AddInboundRequest
+	4,  // 6: cyberservices.core.app.proxyman.command.HandlerService.RemoveInbound:input_type -> cyberservices.core.app.proxyman.command.RemoveInboundRequest
+	6,  // 7: cyberservices.core.app.proxyman.command.HandlerService.AlterInbound:input_type -> cyberservices.core.app.proxyman.command.AlterInboundRequest
+	8,  // 8: cyberservices.core.app.proxyman.command.HandlerService.AddOutbound:input_type -> cyberservices.core.app.proxyman.command.AddOutboundRequest
+	10, // 9: cyberservices.core.app.proxyman.command.HandlerService.RemoveOutbound:input_type -> cyberservices.core.app.proxyman.command.RemoveOutboundRequest
+	12, // 10: cyberservices.core.app.proxyman.command.HandlerService.AlterOutbound:input_type -> cyberservices.core.app.proxyman.command.AlterOutboundRequest
+	3,  // 11: cyberservices.core.app.proxyman.command.HandlerService.AddInbound:output_type -> cyberservices.core.app.proxyman.command.AddInboundResponse
+	5,  // 12: cyberservices.core.app.proxyman.command.HandlerService.RemoveInbound:output_type -> cyberservices.core.app.proxyman.command.RemoveInboundResponse
+	7,  // 13: cyberservices.core.app.proxyman.command.HandlerService.AlterInbound:output_type -> cyberservices.core.app.proxyman.command.AlterInboundResponse
+	9,  // 14: cyberservices.core.app.proxyman.command.HandlerService.AddOutbound:output_type -> cyberservices.core.app.proxyman.command.AddOutboundResponse
+	11, // 15: cyberservices.core.app.proxyman.command.HandlerService.RemoveOutbound:output_type -> cyberservices.core.app.proxyman.command.RemoveOutboundResponse
+	13, // 16: cyberservices.core.app.proxyman.command.HandlerService.AlterOutbound:output_type -> cyberservices.core.app.proxyman.command.AlterOutboundResponse
 	11, // [11:17] is the sub-list for method output_type
 	5,  // [5:11] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name

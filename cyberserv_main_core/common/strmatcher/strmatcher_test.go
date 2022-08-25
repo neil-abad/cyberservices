@@ -4,11 +4,11 @@ import (
 	"reflect"
 	"testing"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/common/strmatcher"
+	"cyberservices.com/core/common"
+	. "cyberservices.com/core/common/strmatcher"
 )
 
-// See https://github.com/v2fly/v2ray-core/issues/92#issuecomment-673238489
+// See https://github.com/v2fly/Project CS-core/issues/92#issuecomment-673238489
 func TestMatcherGroup(t *testing.T) {
 	rules := []struct {
 		Type   Type

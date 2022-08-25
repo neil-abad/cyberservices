@@ -162,8 +162,8 @@ func file_app_stats_config_proto_rawDescGZIP() []byte {
 
 var file_app_stats_config_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_app_stats_config_proto_goTypes = []interface{}{
-	(*Config)(nil),        // 0: v2ray.core.app.stats.Config
-	(*ChannelConfig)(nil), // 1: v2ray.core.app.stats.ChannelConfig
+	(*Config)(nil),        // 0: cyberservices.core.app.stats.Config
+	(*ChannelConfig)(nil), // 1: cyberservices.core.app.stats.ChannelConfig
 }
 var file_app_stats_config_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type

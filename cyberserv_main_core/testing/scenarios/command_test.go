@@ -12,25 +12,25 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/commander"
-	"v2ray.com/core/app/policy"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/app/proxyman/command"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/app/stats"
-	statscmd "v2ray.com/core/app/stats/command"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/commander"
+	"cyberservices.com/core/app/policy"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/app/proxyman/command"
+	"cyberservices.com/core/app/router"
+	"cyberservices.com/core/app/stats"
+	statscmd "cyberservices.com/core/app/stats/command"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/proxy/dokodemo"
+	"cyberservices.com/core/proxy/freedom"
+	"cyberservices.com/core/proxy/vmess"
+	"cyberservices.com/core/proxy/vmess/inbound"
+	"cyberservices.com/core/proxy/vmess/outbound"
+	"cyberservices.com/core/testing/servers/tcp"
 )
 
 func TestCommanderRemoveHandler(t *testing.T) {
@@ -283,7 +283,7 @@ func TestCommanderAddRemoveUser(t *testing.T) {
 		Operation: serial.ToTypedMessage(
 			&command.AddUserOperation{
 				User: &protocol.User{
-					Email: "test@v2ray.com",
+					Email: "test@cyberservices.com",
 					Account: serial.ToTypedMessage(&vmess.Account{
 						Id:      u2.String(),
 						AlterId: 64,
@@ -302,7 +302,7 @@ func TestCommanderAddRemoveUser(t *testing.T) {
 
 	resp, err = hsClient.AlterInbound(context.Background(), &command.AlterInboundRequest{
 		Tag:       "v",
-		Operation: serial.ToTypedMessage(&command.RemoveUserOperation{Email: "test@v2ray.com"}),
+		Operation: serial.ToTypedMessage(&command.RemoveUserOperation{Email: "test@cyberservices.com"}),
 	})
 	common.Must(err)
 	if resp == nil {

@@ -30,7 +30,7 @@ func NewRoutingServiceClient(cc grpc.ClientConnInterface) RoutingServiceClient {
 }
 
 func (c *routingServiceClient) SubscribeRoutingStats(ctx context.Context, in *SubscribeRoutingStatsRequest, opts ...grpc.CallOption) (RoutingService_SubscribeRoutingStatsClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_RoutingService_serviceDesc.Streams[0], "/v2ray.core.app.router.command.RoutingService/SubscribeRoutingStats", opts...)
+	stream, err := c.cc.NewStream(ctx, &_RoutingService_serviceDesc.Streams[0], "/cyberservices.core.app.router.command.RoutingService/SubscribeRoutingStats", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -63,7 +63,7 @@ func (x *routingServiceSubscribeRoutingStatsClient) Recv() (*RoutingContext, err
 
 func (c *routingServiceClient) TestRoute(ctx context.Context, in *TestRouteRequest, opts ...grpc.CallOption) (*RoutingContext, error) {
 	out := new(RoutingContext)
-	err := c.cc.Invoke(ctx, "/v2ray.core.app.router.command.RoutingService/TestRoute", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cyberservices.core.app.router.command.RoutingService/TestRoute", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -133,7 +133,7 @@ func _RoutingService_TestRoute_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/v2ray.core.app.router.command.RoutingService/TestRoute",
+		FullMethod: "/cyberservices.core.app.router.command.RoutingService/TestRoute",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RoutingServiceServer).TestRoute(ctx, req.(*TestRouteRequest))
@@ -142,7 +142,7 @@ func _RoutingService_TestRoute_Handler(srv interface{}, ctx context.Context, dec
 }
 
 var _RoutingService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "v2ray.core.app.router.command.RoutingService",
+	ServiceName: "cyberservices.core.app.router.command.RoutingService",
 	HandlerType: (*RoutingServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

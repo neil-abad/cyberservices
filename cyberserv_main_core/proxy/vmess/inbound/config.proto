@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.vmess.inbound;
-option csharp_namespace = "V2Ray.Core.Proxy.Vmess.Inbound";
-option go_package = "v2ray.com/core/proxy/vmess/inbound";
-option java_package = "com.v2ray.core.proxy.vmess.inbound";
+package cyberservices.core.proxy.vmess.inbound;
+option csharp_namespace = "cyberservices.Core.Proxy.Vmess.Inbound";
+option go_package = "cyberservices.com/core/proxy/vmess/inbound";
+option java_package = "com.cyberservices.core.proxy.vmess.inbound";
 option java_multiple_files = true;
 
 import "common/protocol/user.proto";
@@ -18,7 +18,7 @@ message DefaultConfig {
 }
 
 message Config {
-  repeated v2ray.core.common.protocol.User user = 1;
+  repeated cyberservices.core.common.protocol.User user = 1;
   DefaultConfig default = 2;
   DetourConfig detour = 3;
   bool secure_encryption_only = 4;

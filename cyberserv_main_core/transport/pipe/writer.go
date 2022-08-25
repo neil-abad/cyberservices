@@ -1,7 +1,7 @@
 package pipe
 
 import (
-	"v2ray.com/core/common/buf"
+	"cyberservices.com/core/common/buf"
 )
 
 // Writer is a buf.Writer that writes data into a pipe.

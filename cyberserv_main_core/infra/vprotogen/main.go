@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
 )
 
 func main() {

@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	serial "v2ray.com/core/common/serial"
+	serial "cyberservices.com/core/common/serial"
 )
 
 const (
@@ -122,11 +122,11 @@ func file_app_commander_config_proto_rawDescGZIP() []byte {
 
 var file_app_commander_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_app_commander_config_proto_goTypes = []interface{}{
-	(*Config)(nil),              // 0: v2ray.core.app.commander.Config
-	(*serial.TypedMessage)(nil), // 1: v2ray.core.common.serial.TypedMessage
+	(*Config)(nil),              // 0: cyberservices.core.app.commander.Config
+	(*serial.TypedMessage)(nil), // 1: cyberservices.core.common.serial.TypedMessage
 }
 var file_app_commander_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.app.commander.Config.service:type_name -> v2ray.core.common.serial.TypedMessage
+	1, // 0: cyberservices.core.app.commander.Config.service:type_name -> cyberservices.core.common.serial.TypedMessage
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

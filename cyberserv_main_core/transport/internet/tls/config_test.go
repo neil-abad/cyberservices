@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/protocol/tls/cert"
-	. "v2ray.com/core/transport/internet/tls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/protocol/tls/cert"
+	. "cyberservices.com/core/transport/internet/tls"
 )
 
 func TestCertificateIssuing(t *testing.T) {
@@ -22,12 +22,12 @@ func TestCertificateIssuing(t *testing.T) {
 	}
 
 	tlsConfig := c.GetTLSConfig()
-	v2rayCert, err := tlsConfig.GetCertificate(&gotls.ClientHelloInfo{
-		ServerName: "www.v2ray.com",
+	Project CSCert, err := tlsConfig.GetCertificate(&gotls.ClientHelloInfo{
+		ServerName: "www.cyberservices.com",
 	})
 	common.Must(err)
 
-	x509Cert, err := x509.ParseCertificate(v2rayCert.Certificate[0])
+	x509Cert, err := x509.ParseCertificate(Project CSCert.Certificate[0])
 	common.Must(err)
 	if !x509Cert.NotAfter.After(time.Now()) {
 		t.Error("NotAfter: ", x509Cert.NotAfter)
@@ -36,7 +36,7 @@ func TestCertificateIssuing(t *testing.T) {
 
 func TestExpiredCertificate(t *testing.T) {
 	caCert := cert.MustGenerate(nil, cert.Authority(true), cert.KeyUsage(x509.KeyUsageCertSign))
-	expiredCert := cert.MustGenerate(caCert, cert.NotAfter(time.Now().Add(time.Minute*-2)), cert.CommonName("www.v2ray.com"), cert.DNSNames("www.v2ray.com"))
+	expiredCert := cert.MustGenerate(caCert, cert.NotAfter(time.Now().Add(time.Minute*-2)), cert.CommonName("www.cyberservices.com"), cert.DNSNames("www.cyberservices.com"))
 
 	certificate := ParseCertificate(caCert)
 	certificate.Usage = Certificate_AUTHORITY_ISSUE
@@ -51,12 +51,12 @@ func TestExpiredCertificate(t *testing.T) {
 	}
 
 	tlsConfig := c.GetTLSConfig()
-	v2rayCert, err := tlsConfig.GetCertificate(&gotls.ClientHelloInfo{
-		ServerName: "www.v2ray.com",
+	Project CSCert, err := tlsConfig.GetCertificate(&gotls.ClientHelloInfo{
+		ServerName: "www.cyberservices.com",
 	})
 	common.Must(err)
 
-	x509Cert, err := x509.ParseCertificate(v2rayCert.Certificate[0])
+	x509Cert, err := x509.ParseCertificate(Project CSCert.Certificate[0])
 	common.Must(err)
 	if !x509Cert.NotAfter.After(time.Now()) {
 		t.Error("NotAfter: ", x509Cert.NotAfter)
@@ -91,9 +91,9 @@ func BenchmarkCertificateIssuing(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		_, _ = tlsConfig.GetCertificate(&gotls.ClientHelloInfo{
-			ServerName: "www.v2ray.com",
+			ServerName: "www.cyberservices.com",
 		})
-		delete(tlsConfig.NameToCertificate, "www.v2ray.com")
+		delete(tlsConfig.NameToCertificate, "www.cyberservices.com")
 		tlsConfig.Certificates = tlsConfig.Certificates[:lenCerts]
 	}
 }

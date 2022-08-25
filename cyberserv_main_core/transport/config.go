@@ -1,7 +1,7 @@
 package transport
 
 import (
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet"
 )
 
 // Apply applies this Config.

@@ -2,7 +2,7 @@ package conf
 
 import (
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/app/reverse"
+	"cyberservices.com/core/app/reverse"
 )
 
 type BridgeConfig struct {

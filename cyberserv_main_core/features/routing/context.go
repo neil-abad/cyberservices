@@ -1,7 +1,7 @@
 package routing
 
 import (
-	"v2ray.com/core/common/net"
+	"cyberservices.com/core/common/net"
 )
 
 // Context is a feature to store connection information for routing.
@@ -32,9 +32,4 @@ type Context interface {
 	// GetProtocol returns the protocol from the connection content, if sniffed out.
 	GetProtocol() string
 
-	// GetUser returns the user email from the connection content, if exists.
-	GetUser() string
-
-	// GetAttributes returns extra attributes from the conneciont content.
-	GetAttributes() map[string]string
-}
+	}	

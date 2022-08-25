@@ -88,7 +88,7 @@ type SecurityConfig struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type SecurityType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.common.protocol.SecurityType" json:"type,omitempty"`
+	Type SecurityType `protobuf:"varint,1,opt,name=type,proto3,enum=cyberservices.core.common.protocol.SecurityType" json:"type,omitempty"`
 }
 
 func (x *SecurityConfig) Reset() {
@@ -172,11 +172,11 @@ func file_common_protocol_headers_proto_rawDescGZIP() []byte {
 var file_common_protocol_headers_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_protocol_headers_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_protocol_headers_proto_goTypes = []interface{}{
-	(SecurityType)(0),      // 0: v2ray.core.common.protocol.SecurityType
-	(*SecurityConfig)(nil), // 1: v2ray.core.common.protocol.SecurityConfig
+	(SecurityType)(0),      // 0: cyberservices.core.common.protocol.SecurityType
+	(*SecurityConfig)(nil), // 1: cyberservices.core.common.protocol.SecurityConfig
 }
 var file_common_protocol_headers_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.common.protocol.SecurityConfig.type:type_name -> v2ray.core.common.protocol.SecurityType
+	0, // 0: cyberservices.core.common.protocol.SecurityConfig.type:type_name -> cyberservices.core.common.protocol.SecurityType
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

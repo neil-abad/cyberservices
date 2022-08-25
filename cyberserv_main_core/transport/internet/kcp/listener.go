@@ -10,13 +10,13 @@ import (
 
 	goxtls "github.com/xtls/go"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/internet/udp"
-	"v2ray.com/core/transport/internet/xtls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/tls"
+	"cyberservices.com/core/transport/internet/udp"
+	"cyberservices.com/core/transport/internet/xtls"
 )
 
 type ConnectionID struct {

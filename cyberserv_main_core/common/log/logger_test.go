@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/common/log"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	. "cyberservices.com/core/common/log"
 )
 
 func TestFileLogger(t *testing.T) {

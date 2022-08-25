@@ -8,14 +8,14 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol/tls/cert"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/transport/internet"
-	. "v2ray.com/core/transport/internet/http"
-	"v2ray.com/core/transport/internet/tls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol/tls/cert"
+	"cyberservices.com/core/testing/servers/tcp"
+	"cyberservices.com/core/transport/internet"
+	. "cyberservices.com/core/transport/internet/http"
+	"cyberservices.com/core/transport/internet/tls"
 )
 
 func TestHTTPConnection(t *testing.T) {
@@ -26,7 +26,7 @@ func TestHTTPConnection(t *testing.T) {
 		ProtocolSettings: &Config{},
 		SecurityType:     "tls",
 		SecuritySettings: &tls.Config{
-			Certificate: []*tls.Certificate{tls.ParseCertificate(cert.MustGenerate(nil, cert.CommonName("www.v2ray.com")))},
+			Certificate: []*tls.Certificate{tls.ParseCertificate(cert.MustGenerate(nil, cert.CommonName("www.cyberservices.com")))},
 		},
 	}, func(conn internet.Connection) {
 		go func() {
@@ -56,7 +56,7 @@ func TestHTTPConnection(t *testing.T) {
 		ProtocolSettings: &Config{},
 		SecurityType:     "tls",
 		SecuritySettings: &tls.Config{
-			ServerName:    "www.v2ray.com",
+			ServerName:    "www.cyberservices.com",
 			AllowInsecure: true,
 		},
 	})

@@ -2,7 +2,7 @@
 
 package command
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
@@ -11,11 +11,11 @@ import (
 
 	grpc "google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/stats"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/strmatcher"
-	feature_stats "v2ray.com/core/features/stats"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/stats"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/strmatcher"
+	feature_stats "cyberservices.com/core/features/stats"
 )
 
 // statsServer is an implementation of StatsService.

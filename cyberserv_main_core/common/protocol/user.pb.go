@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	serial "v2ray.com/core/common/serial"
+	serial "cyberservices.com/core/common/serial"
 )
 
 const (
@@ -131,11 +131,11 @@ func file_common_protocol_user_proto_rawDescGZIP() []byte {
 
 var file_common_protocol_user_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_protocol_user_proto_goTypes = []interface{}{
-	(*User)(nil),                // 0: v2ray.core.common.protocol.User
-	(*serial.TypedMessage)(nil), // 1: v2ray.core.common.serial.TypedMessage
+	(*User)(nil),                // 0: cyberservices.core.common.protocol.User
+	(*serial.TypedMessage)(nil), // 1: cyberservices.core.common.serial.TypedMessage
 }
 var file_common_protocol_user_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.common.protocol.User.account:type_name -> v2ray.core.common.serial.TypedMessage
+	1, // 0: cyberservices.core.common.protocol.User.account:type_name -> cyberservices.core.common.serial.TypedMessage
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

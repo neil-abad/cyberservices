@@ -115,7 +115,7 @@ func file_transport_internet_http_config_proto_rawDescGZIP() []byte {
 
 var file_transport_internet_http_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_transport_internet_http_config_proto_goTypes = []interface{}{
-	(*Config)(nil), // 0: v2ray.core.transport.internet.http.Config
+	(*Config)(nil), // 0: cyberservices.core.transport.internet.http.Config
 }
 var file_transport_internet_http_config_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type

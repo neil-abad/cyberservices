@@ -1,8 +1,8 @@
 package tcp
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
 )
 
 // PickPort returns an unused TCP port in the system. The port returned is highly likely to be unused, but not guaranteed.

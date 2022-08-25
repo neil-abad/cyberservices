@@ -3,9 +3,9 @@
 package router
 
 import (
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features/outbound"
-	"v2ray.com/core/features/routing"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/features/outbound"
+	"cyberservices.com/core/features/routing"
 )
 
 // CIDRList is an alias of []*CIDR to provide sort.Interface.

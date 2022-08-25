@@ -12,10 +12,10 @@ import (
 	"math/big"
 	"time"
 
-	"v2ray.com/core/common"
+	"cyberservices.com/core/common"
 )
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 type Certificate struct {
 	// Cerificate in ASN.1 DER format

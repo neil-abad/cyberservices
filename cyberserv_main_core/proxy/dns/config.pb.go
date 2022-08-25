@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	net "v2ray.com/core/common/net"
+	net "cyberservices.com/core/common/net"
 )
 
 const (
@@ -109,11 +109,11 @@ func file_proxy_dns_config_proto_rawDescGZIP() []byte {
 
 var file_proxy_dns_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_proxy_dns_config_proto_goTypes = []interface{}{
-	(*Config)(nil),       // 0: v2ray.core.proxy.dns.Config
-	(*net.Endpoint)(nil), // 1: v2ray.core.common.net.Endpoint
+	(*Config)(nil),       // 0: cyberservices.core.proxy.dns.Config
+	(*net.Endpoint)(nil), // 1: cyberservices.core.common.net.Endpoint
 }
 var file_proxy_dns_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.proxy.dns.Config.server:type_name -> v2ray.core.common.net.Endpoint
+	1, // 0: cyberservices.core.proxy.dns.Config.server:type_name -> cyberservices.core.common.net.Endpoint
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

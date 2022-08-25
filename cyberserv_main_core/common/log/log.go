@@ -1,9 +1,9 @@
-package log // import "v2ray.com/core/common/log"
+package log // import "cyberservices.com/core/common/log"
 
 import (
 	"sync"
 
-	"v2ray.com/core/common/serial"
+	"cyberservices.com/core/common/serial"
 )
 
 // Message is the interface for all log messages.

@@ -9,16 +9,16 @@ import (
 
 	"golang.org/x/net/dns/dnsmessage"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	dns_proto "v2ray.com/core/common/protocol/dns"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	dns_proto "cyberservices.com/core/common/protocol/dns"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/features/dns"
+	"cyberservices.com/core/transport"
+	"cyberservices.com/core/transport/internet"
 )
 
 func init() {

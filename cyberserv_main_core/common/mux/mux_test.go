@@ -6,12 +6,12 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/common/mux"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/transport/pipe"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	. "cyberservices.com/core/common/mux"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/transport/pipe"
 )
 
 func readAll(reader buf.Reader) (buf.MultiBuffer, error) {
@@ -32,7 +32,7 @@ func readAll(reader buf.Reader) (buf.MultiBuffer, error) {
 func TestReaderWriter(t *testing.T) {
 	pReader, pWriter := pipe.New(pipe.WithSizeLimit(1024))
 
-	dest := net.TCPDestination(net.DomainAddress("v2ray.com"), 80)
+	dest := net.TCPDestination(net.DomainAddress("cyberservices.com"), 80)
 	writer := NewWriter(1, dest, pWriter, protocol.TransferTypeStream)
 
 	dest2 := net.TCPDestination(net.LocalHostIP, 443)

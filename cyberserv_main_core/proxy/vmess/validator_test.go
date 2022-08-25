@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	. "v2ray.com/core/proxy/vmess"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/uuid"
+	. "cyberservices.com/core/proxy/vmess"
 )
 
 func toAccount(a *Account) protocol.Account {

@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/binary"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/dice"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/dice"
 )
 
 type SRTP struct {

@@ -8,25 +8,25 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/protocol/tls/cert"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/freedom"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/testing/servers/udp"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/http"
-	"v2ray.com/core/transport/internet/tls"
-	"v2ray.com/core/transport/internet/websocket"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/protocol/tls/cert"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/proxy/dokodemo"
+	"cyberservices.com/core/proxy/freedom"
+	"cyberservices.com/core/proxy/vmess"
+	"cyberservices.com/core/proxy/vmess/inbound"
+	"cyberservices.com/core/proxy/vmess/outbound"
+	"cyberservices.com/core/testing/servers/tcp"
+	"cyberservices.com/core/testing/servers/udp"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/http"
+	"cyberservices.com/core/transport/internet/tls"
+	"cyberservices.com/core/transport/internet/websocket"
 )
 
 func TestSimpleTLSConnection(t *testing.T) {
@@ -228,7 +228,7 @@ func TestAutoIssuingCertificate(t *testing.T) {
 						SecurityType: serial.GetMessageType(&tls.Config{}),
 						SecuritySettings: []*serial.TypedMessage{
 							serial.ToTypedMessage(&tls.Config{
-								ServerName: "v2ray.com",
+								ServerName: "cyberservices.com",
 								Certificate: []*tls.Certificate{{
 									Certificate: certPEM,
 									Usage:       tls.Certificate_AUTHORITY_VERIFY,
@@ -488,7 +488,7 @@ func TestHTTP2(t *testing.T) {
 							{
 								Protocol: internet.TransportProtocol_HTTP,
 								Settings: serial.ToTypedMessage(&http.Config{
-									Host: []string{"v2ray.com"},
+									Host: []string{"cyberservices.com"},
 									Path: "/testpath",
 								}),
 							},
@@ -560,7 +560,7 @@ func TestHTTP2(t *testing.T) {
 							{
 								Protocol: internet.TransportProtocol_HTTP,
 								Settings: serial.ToTypedMessage(&http.Config{
-									Host: []string{"v2ray.com"},
+									Host: []string{"cyberservices.com"},
 									Path: "/testpath",
 								}),
 							},

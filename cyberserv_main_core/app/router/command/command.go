@@ -2,7 +2,7 @@
 
 package command
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
@@ -10,10 +10,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/features/stats"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/features/routing"
+	"cyberservices.com/core/features/stats"
 )
 
 // routingServer is an implementation of RoutingService.

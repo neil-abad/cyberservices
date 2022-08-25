@@ -3,9 +3,9 @@ package dispatcher_test
 import (
 	"testing"
 
-	. "v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
+	. "cyberservices.com/core/app/dispatcher"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
 )
 
 type TestCounter int64

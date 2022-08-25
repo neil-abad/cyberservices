@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	net "v2ray.com/core/common/net"
+	net "cyberservices.com/core/common/net"
 )
 
 const (
@@ -146,7 +146,7 @@ type Domain struct {
 	unknownFields protoimpl.UnknownFields
 
 	// Domain matching type.
-	Type Domain_Type `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.router.Domain_Type" json:"type,omitempty"`
+	Type Domain_Type `protobuf:"varint,1,opt,name=type,proto3,enum=cyberservices.core.app.router.Domain_Type" json:"type,omitempty"`
 	// Domain value.
 	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 	// Attributes of this domain. May be used for filtering.
@@ -501,7 +501,7 @@ type RoutingRule struct {
 	// Deprecated: Do not use.
 	NetworkList *net.NetworkList `protobuf:"bytes,5,opt,name=network_list,json=networkList,proto3" json:"network_list,omitempty"`
 	// List of networks for matching.
-	Networks []net.Network `protobuf:"varint,13,rep,packed,name=networks,proto3,enum=v2ray.core.common.net.Network" json:"networks,omitempty"`
+	Networks []net.Network `protobuf:"varint,13,rep,packed,name=networks,proto3,enum=cyberservices.core.common.net.Network" json:"networks,omitempty"`
 	// List of CIDRs for source IP address matching.
 	//
 	// Deprecated: Do not use.
@@ -750,7 +750,7 @@ type Config struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	DomainStrategy Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=v2ray.core.app.router.Config_DomainStrategy" json:"domain_strategy,omitempty"`
+	DomainStrategy Config_DomainStrategy `protobuf:"varint,1,opt,name=domain_strategy,json=domainStrategy,proto3,enum=cyberservices.core.app.router.Config_DomainStrategy" json:"domain_strategy,omitempty"`
 	Rule           []*RoutingRule        `protobuf:"bytes,2,rep,name=rule,proto3" json:"rule,omitempty"`
 	BalancingRule  []*BalancingRule      `protobuf:"bytes,3,rep,name=balancing_rule,json=balancingRule,proto3" json:"balancing_rule,omitempty"`
 }
@@ -1049,43 +1049,43 @@ func file_app_router_config_proto_rawDescGZIP() []byte {
 var file_app_router_config_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_app_router_config_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_app_router_config_proto_goTypes = []interface{}{
-	(Domain_Type)(0),           // 0: v2ray.core.app.router.Domain.Type
-	(Config_DomainStrategy)(0), // 1: v2ray.core.app.router.Config.DomainStrategy
-	(*Domain)(nil),             // 2: v2ray.core.app.router.Domain
-	(*CIDR)(nil),               // 3: v2ray.core.app.router.CIDR
-	(*GeoIP)(nil),              // 4: v2ray.core.app.router.GeoIP
-	(*GeoIPList)(nil),          // 5: v2ray.core.app.router.GeoIPList
-	(*GeoSite)(nil),            // 6: v2ray.core.app.router.GeoSite
-	(*GeoSiteList)(nil),        // 7: v2ray.core.app.router.GeoSiteList
-	(*RoutingRule)(nil),        // 8: v2ray.core.app.router.RoutingRule
-	(*BalancingRule)(nil),      // 9: v2ray.core.app.router.BalancingRule
-	(*Config)(nil),             // 10: v2ray.core.app.router.Config
-	(*Domain_Attribute)(nil),   // 11: v2ray.core.app.router.Domain.Attribute
-	(*net.PortRange)(nil),      // 12: v2ray.core.common.net.PortRange
-	(*net.PortList)(nil),       // 13: v2ray.core.common.net.PortList
-	(*net.NetworkList)(nil),    // 14: v2ray.core.common.net.NetworkList
-	(net.Network)(0),           // 15: v2ray.core.common.net.Network
+	(Domain_Type)(0),           // 0: cyberservices.core.app.router.Domain.Type
+	(Config_DomainStrategy)(0), // 1: cyberservices.core.app.router.Config.DomainStrategy
+	(*Domain)(nil),             // 2: cyberservices.core.app.router.Domain
+	(*CIDR)(nil),               // 3: cyberservices.core.app.router.CIDR
+	(*GeoIP)(nil),              // 4: cyberservices.core.app.router.GeoIP
+	(*GeoIPList)(nil),          // 5: cyberservices.core.app.router.GeoIPList
+	(*GeoSite)(nil),            // 6: cyberservices.core.app.router.GeoSite
+	(*GeoSiteList)(nil),        // 7: cyberservices.core.app.router.GeoSiteList
+	(*RoutingRule)(nil),        // 8: cyberservices.core.app.router.RoutingRule
+	(*BalancingRule)(nil),      // 9: cyberservices.core.app.router.BalancingRule
+	(*Config)(nil),             // 10: cyberservices.core.app.router.Config
+	(*Domain_Attribute)(nil),   // 11: cyberservices.core.app.router.Domain.Attribute
+	(*net.PortRange)(nil),      // 12: cyberservices.core.common.net.PortRange
+	(*net.PortList)(nil),       // 13: cyberservices.core.common.net.PortList
+	(*net.NetworkList)(nil),    // 14: cyberservices.core.common.net.NetworkList
+	(net.Network)(0),           // 15: cyberservices.core.common.net.Network
 }
 var file_app_router_config_proto_depIdxs = []int32{
-	0,  // 0: v2ray.core.app.router.Domain.type:type_name -> v2ray.core.app.router.Domain.Type
-	11, // 1: v2ray.core.app.router.Domain.attribute:type_name -> v2ray.core.app.router.Domain.Attribute
-	3,  // 2: v2ray.core.app.router.GeoIP.cidr:type_name -> v2ray.core.app.router.CIDR
-	4,  // 3: v2ray.core.app.router.GeoIPList.entry:type_name -> v2ray.core.app.router.GeoIP
-	2,  // 4: v2ray.core.app.router.GeoSite.domain:type_name -> v2ray.core.app.router.Domain
-	6,  // 5: v2ray.core.app.router.GeoSiteList.entry:type_name -> v2ray.core.app.router.GeoSite
-	2,  // 6: v2ray.core.app.router.RoutingRule.domain:type_name -> v2ray.core.app.router.Domain
-	3,  // 7: v2ray.core.app.router.RoutingRule.cidr:type_name -> v2ray.core.app.router.CIDR
-	4,  // 8: v2ray.core.app.router.RoutingRule.geoip:type_name -> v2ray.core.app.router.GeoIP
-	12, // 9: v2ray.core.app.router.RoutingRule.port_range:type_name -> v2ray.core.common.net.PortRange
-	13, // 10: v2ray.core.app.router.RoutingRule.port_list:type_name -> v2ray.core.common.net.PortList
-	14, // 11: v2ray.core.app.router.RoutingRule.network_list:type_name -> v2ray.core.common.net.NetworkList
-	15, // 12: v2ray.core.app.router.RoutingRule.networks:type_name -> v2ray.core.common.net.Network
-	3,  // 13: v2ray.core.app.router.RoutingRule.source_cidr:type_name -> v2ray.core.app.router.CIDR
-	4,  // 14: v2ray.core.app.router.RoutingRule.source_geoip:type_name -> v2ray.core.app.router.GeoIP
-	13, // 15: v2ray.core.app.router.RoutingRule.source_port_list:type_name -> v2ray.core.common.net.PortList
-	1,  // 16: v2ray.core.app.router.Config.domain_strategy:type_name -> v2ray.core.app.router.Config.DomainStrategy
-	8,  // 17: v2ray.core.app.router.Config.rule:type_name -> v2ray.core.app.router.RoutingRule
-	9,  // 18: v2ray.core.app.router.Config.balancing_rule:type_name -> v2ray.core.app.router.BalancingRule
+	0,  // 0: cyberservices.core.app.router.Domain.type:type_name -> cyberservices.core.app.router.Domain.Type
+	11, // 1: cyberservices.core.app.router.Domain.attribute:type_name -> cyberservices.core.app.router.Domain.Attribute
+	3,  // 2: cyberservices.core.app.router.GeoIP.cidr:type_name -> cyberservices.core.app.router.CIDR
+	4,  // 3: cyberservices.core.app.router.GeoIPList.entry:type_name -> cyberservices.core.app.router.GeoIP
+	2,  // 4: cyberservices.core.app.router.GeoSite.domain:type_name -> cyberservices.core.app.router.Domain
+	6,  // 5: cyberservices.core.app.router.GeoSiteList.entry:type_name -> cyberservices.core.app.router.GeoSite
+	2,  // 6: cyberservices.core.app.router.RoutingRule.domain:type_name -> cyberservices.core.app.router.Domain
+	3,  // 7: cyberservices.core.app.router.RoutingRule.cidr:type_name -> cyberservices.core.app.router.CIDR
+	4,  // 8: cyberservices.core.app.router.RoutingRule.geoip:type_name -> cyberservices.core.app.router.GeoIP
+	12, // 9: cyberservices.core.app.router.RoutingRule.port_range:type_name -> cyberservices.core.common.net.PortRange
+	13, // 10: cyberservices.core.app.router.RoutingRule.port_list:type_name -> cyberservices.core.common.net.PortList
+	14, // 11: cyberservices.core.app.router.RoutingRule.network_list:type_name -> cyberservices.core.common.net.NetworkList
+	15, // 12: cyberservices.core.app.router.RoutingRule.networks:type_name -> cyberservices.core.common.net.Network
+	3,  // 13: cyberservices.core.app.router.RoutingRule.source_cidr:type_name -> cyberservices.core.app.router.CIDR
+	4,  // 14: cyberservices.core.app.router.RoutingRule.source_geoip:type_name -> cyberservices.core.app.router.GeoIP
+	13, // 15: cyberservices.core.app.router.RoutingRule.source_port_list:type_name -> cyberservices.core.common.net.PortList
+	1,  // 16: cyberservices.core.app.router.Config.domain_strategy:type_name -> cyberservices.core.app.router.Config.DomainStrategy
+	8,  // 17: cyberservices.core.app.router.Config.rule:type_name -> cyberservices.core.app.router.RoutingRule
+	9,  // 18: cyberservices.core.app.router.Config.balancing_rule:type_name -> cyberservices.core.app.router.BalancingRule
 	19, // [19:19] is the sub-list for method output_type
 	19, // [19:19] is the sub-list for method input_type
 	19, // [19:19] is the sub-list for extension type_name

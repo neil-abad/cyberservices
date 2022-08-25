@@ -14,16 +14,16 @@ import (
 	"time"
 
 	"golang.org/x/crypto/chacha20poly1305"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/bitmask"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/crypto"
-	"v2ray.com/core/common/dice"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/proxy/vmess"
-	vmessaead "v2ray.com/core/proxy/vmess/aead"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/bitmask"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/crypto"
+	"cyberservices.com/core/common/dice"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/proxy/vmess"
+	vmessaead "cyberservices.com/core/proxy/vmess/aead"
 )
 
 type sessionId struct {
@@ -283,7 +283,7 @@ func (s *ServerSession) DecodeRequestHeader(reader io.Reader) (*protocol.Request
 			if burnErr != nil {
 				Autherr = newError("invalid auth, can't taint legacy userHash").Base(burnErr)
 			}
-			//It is possible that we are under attack described in https://github.com/v2ray/v2ray-core/issues/2523
+			//It is possible that we are under attack described in https://github.com/Project CS/Project CS-core/issues/2523
 			return nil, drainConnection(Autherr)
 		} else {
 			return nil, newError("invalid auth, but this is a AEAD request")

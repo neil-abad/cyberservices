@@ -4,11 +4,11 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	. "v2ray.com/core/proxy/trojan"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	. "cyberservices.com/core/proxy/trojan"
 )
 
 func toAccount(a *Account) protocol.Account {
@@ -19,7 +19,7 @@ func toAccount(a *Account) protocol.Account {
 
 func TestTCPRequest(t *testing.T) {
 	user := &protocol.MemoryUser{
-		Email: "love@v2ray.com",
+		Email: "love@cyberservices.com",
 		Account: toAccount(&Account{
 			Password: "password",
 		}),
@@ -51,7 +51,7 @@ func TestTCPRequest(t *testing.T) {
 
 func TestUDPRequest(t *testing.T) {
 	user := &protocol.MemoryUser{
-		Email: "love@v2ray.com",
+		Email: "love@cyberservices.com",
 		Account: toAccount(&Account{
 			Password: "password",
 		}),

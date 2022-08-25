@@ -3,8 +3,8 @@
 package log
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/log"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/log"
 )
 
 type HandlerCreatorOptions struct {

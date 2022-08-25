@@ -12,8 +12,8 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	router "v2ray.com/core/app/router"
-	net "v2ray.com/core/common/net"
+	router "cyberservices.com/core/app/router"
+	net "cyberservices.com/core/common/net"
 )
 
 const (
@@ -257,7 +257,7 @@ type NameServer_PriorityDomain struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=cyberservices.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 }
 
@@ -367,11 +367,11 @@ type Config_HostMapping struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=v2ray.core.app.dns.DomainMatchingType" json:"type,omitempty"`
+	Type   DomainMatchingType `protobuf:"varint,1,opt,name=type,proto3,enum=cyberservices.core.app.dns.DomainMatchingType" json:"type,omitempty"`
 	Domain string             `protobuf:"bytes,2,opt,name=domain,proto3" json:"domain,omitempty"`
 	Ip     [][]byte           `protobuf:"bytes,3,rep,name=ip,proto3" json:"ip,omitempty"`
 	// ProxiedDomain indicates the mapped domain has the same IP address on this
-	// domain. V2Ray will use this domain for IP queries. This field is only
+	// domain. Project CS will use this domain for IP queries. This field is only
 	// effective if ip is empty.
 	ProxiedDomain string `protobuf:"bytes,4,opt,name=proxied_domain,json=proxiedDomain,proto3" json:"proxied_domain,omitempty"`
 }
@@ -539,29 +539,29 @@ func file_app_dns_config_proto_rawDescGZIP() []byte {
 var file_app_dns_config_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_app_dns_config_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_app_dns_config_proto_goTypes = []interface{}{
-	(DomainMatchingType)(0),           // 0: v2ray.core.app.dns.DomainMatchingType
-	(*NameServer)(nil),                // 1: v2ray.core.app.dns.NameServer
-	(*Config)(nil),                    // 2: v2ray.core.app.dns.Config
-	(*NameServer_PriorityDomain)(nil), // 3: v2ray.core.app.dns.NameServer.PriorityDomain
-	(*NameServer_OriginalRule)(nil),   // 4: v2ray.core.app.dns.NameServer.OriginalRule
-	nil,                               // 5: v2ray.core.app.dns.Config.HostsEntry
-	(*Config_HostMapping)(nil),        // 6: v2ray.core.app.dns.Config.HostMapping
-	(*net.Endpoint)(nil),              // 7: v2ray.core.common.net.Endpoint
-	(*router.GeoIP)(nil),              // 8: v2ray.core.app.router.GeoIP
-	(*net.IPOrDomain)(nil),            // 9: v2ray.core.common.net.IPOrDomain
+	(DomainMatchingType)(0),           // 0: cyberservices.core.app.dns.DomainMatchingType
+	(*NameServer)(nil),                // 1: cyberservices.core.app.dns.NameServer
+	(*Config)(nil),                    // 2: cyberservices.core.app.dns.Config
+	(*NameServer_PriorityDomain)(nil), // 3: cyberservices.core.app.dns.NameServer.PriorityDomain
+	(*NameServer_OriginalRule)(nil),   // 4: cyberservices.core.app.dns.NameServer.OriginalRule
+	nil,                               // 5: cyberservices.core.app.dns.Config.HostsEntry
+	(*Config_HostMapping)(nil),        // 6: cyberservices.core.app.dns.Config.HostMapping
+	(*net.Endpoint)(nil),              // 7: cyberservices.core.common.net.Endpoint
+	(*router.GeoIP)(nil),              // 8: cyberservices.core.app.router.GeoIP
+	(*net.IPOrDomain)(nil),            // 9: cyberservices.core.common.net.IPOrDomain
 }
 var file_app_dns_config_proto_depIdxs = []int32{
-	7,  // 0: v2ray.core.app.dns.NameServer.address:type_name -> v2ray.core.common.net.Endpoint
-	3,  // 1: v2ray.core.app.dns.NameServer.prioritized_domain:type_name -> v2ray.core.app.dns.NameServer.PriorityDomain
-	8,  // 2: v2ray.core.app.dns.NameServer.geoip:type_name -> v2ray.core.app.router.GeoIP
-	4,  // 3: v2ray.core.app.dns.NameServer.original_rules:type_name -> v2ray.core.app.dns.NameServer.OriginalRule
-	7,  // 4: v2ray.core.app.dns.Config.NameServers:type_name -> v2ray.core.common.net.Endpoint
-	1,  // 5: v2ray.core.app.dns.Config.name_server:type_name -> v2ray.core.app.dns.NameServer
-	5,  // 6: v2ray.core.app.dns.Config.Hosts:type_name -> v2ray.core.app.dns.Config.HostsEntry
-	6,  // 7: v2ray.core.app.dns.Config.static_hosts:type_name -> v2ray.core.app.dns.Config.HostMapping
-	0,  // 8: v2ray.core.app.dns.NameServer.PriorityDomain.type:type_name -> v2ray.core.app.dns.DomainMatchingType
-	9,  // 9: v2ray.core.app.dns.Config.HostsEntry.value:type_name -> v2ray.core.common.net.IPOrDomain
-	0,  // 10: v2ray.core.app.dns.Config.HostMapping.type:type_name -> v2ray.core.app.dns.DomainMatchingType
+	7,  // 0: cyberservices.core.app.dns.NameServer.address:type_name -> cyberservices.core.common.net.Endpoint
+	3,  // 1: cyberservices.core.app.dns.NameServer.prioritized_domain:type_name -> cyberservices.core.app.dns.NameServer.PriorityDomain
+	8,  // 2: cyberservices.core.app.dns.NameServer.geoip:type_name -> cyberservices.core.app.router.GeoIP
+	4,  // 3: cyberservices.core.app.dns.NameServer.original_rules:type_name -> cyberservices.core.app.dns.NameServer.OriginalRule
+	7,  // 4: cyberservices.core.app.dns.Config.NameServers:type_name -> cyberservices.core.common.net.Endpoint
+	1,  // 5: cyberservices.core.app.dns.Config.name_server:type_name -> cyberservices.core.app.dns.NameServer
+	5,  // 6: cyberservices.core.app.dns.Config.Hosts:type_name -> cyberservices.core.app.dns.Config.HostsEntry
+	6,  // 7: cyberservices.core.app.dns.Config.static_hosts:type_name -> cyberservices.core.app.dns.Config.HostMapping
+	0,  // 8: cyberservices.core.app.dns.NameServer.PriorityDomain.type:type_name -> cyberservices.core.app.dns.DomainMatchingType
+	9,  // 9: cyberservices.core.app.dns.Config.HostsEntry.value:type_name -> cyberservices.core.common.net.IPOrDomain
+	0,  // 10: cyberservices.core.app.dns.Config.HostMapping.type:type_name -> cyberservices.core.app.dns.DomainMatchingType
 	11, // [11:11] is the sub-list for method output_type
 	11, // [11:11] is the sub-list for method input_type
 	11, // [11:11] is the sub-list for extension type_name

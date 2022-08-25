@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	. "v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/vmess"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	. "cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/proxy/vmess"
 )
 
 func TestAlwaysValidStrategy(t *testing.T) {
@@ -51,19 +51,19 @@ func TestUserInServerSpec(t *testing.T) {
 	}
 
 	spec := NewServerSpec(net.Destination{}, AlwaysValid(), &MemoryUser{
-		Email:   "test1@v2ray.com",
+		Email:   "test1@cyberservices.com",
 		Account: toAccount(&vmess.Account{Id: uuid1.String()}),
 	})
 	if spec.HasUser(&MemoryUser{
-		Email:   "test1@v2ray.com",
+		Email:   "test1@cyberservices.com",
 		Account: toAccount(&vmess.Account{Id: uuid2.String()}),
 	}) {
 		t.Error("has user: ", uuid2)
 	}
 
-	spec.AddUser(&MemoryUser{Email: "test2@v2ray.com"})
+	spec.AddUser(&MemoryUser{Email: "test2@cyberservices.com"})
 	if !spec.HasUser(&MemoryUser{
-		Email:   "test1@v2ray.com",
+		Email:   "test1@cyberservices.com",
 		Account: toAccount(&vmess.Account{Id: uuid1.String()}),
 	}) {
 		t.Error("not having user: ", uuid1)
@@ -71,9 +71,9 @@ func TestUserInServerSpec(t *testing.T) {
 }
 
 func TestPickUser(t *testing.T) {
-	spec := NewServerSpec(net.Destination{}, AlwaysValid(), &MemoryUser{Email: "test1@v2ray.com"}, &MemoryUser{Email: "test2@v2ray.com"}, &MemoryUser{Email: "test3@v2ray.com"})
+	spec := NewServerSpec(net.Destination{}, AlwaysValid(), &MemoryUser{Email: "test1@cyberservices.com"}, &MemoryUser{Email: "test2@cyberservices.com"}, &MemoryUser{Email: "test3@cyberservices.com"})
 	user := spec.PickUser()
-	if !strings.HasSuffix(user.Email, "@v2ray.com") {
+	if !strings.HasSuffix(user.Email, "@cyberservices.com") {
 		t.Error("user: ", user.Email)
 	}
 }

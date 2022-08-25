@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	log "v2ray.com/core/common/log"
+	log "cyberservices.com/core/common/log"
 )
 
 const (
@@ -83,10 +83,10 @@ type Config struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ErrorLogType  LogType      `protobuf:"varint,1,opt,name=error_log_type,json=errorLogType,proto3,enum=v2ray.core.app.log.LogType" json:"error_log_type,omitempty"`
-	ErrorLogLevel log.Severity `protobuf:"varint,2,opt,name=error_log_level,json=errorLogLevel,proto3,enum=v2ray.core.common.log.Severity" json:"error_log_level,omitempty"`
+	ErrorLogType  LogType      `protobuf:"varint,1,opt,name=error_log_type,json=errorLogType,proto3,enum=cyberservices.core.app.log.LogType" json:"error_log_type,omitempty"`
+	ErrorLogLevel log.Severity `protobuf:"varint,2,opt,name=error_log_level,json=errorLogLevel,proto3,enum=cyberservices.core.common.log.Severity" json:"error_log_level,omitempty"`
 	ErrorLogPath  string       `protobuf:"bytes,3,opt,name=error_log_path,json=errorLogPath,proto3" json:"error_log_path,omitempty"`
-	AccessLogType LogType      `protobuf:"varint,4,opt,name=access_log_type,json=accessLogType,proto3,enum=v2ray.core.app.log.LogType" json:"access_log_type,omitempty"`
+	AccessLogType LogType      `protobuf:"varint,4,opt,name=access_log_type,json=accessLogType,proto3,enum=cyberservices.core.app.log.LogType" json:"access_log_type,omitempty"`
 	AccessLogPath string       `protobuf:"bytes,5,opt,name=access_log_path,json=accessLogPath,proto3" json:"access_log_path,omitempty"`
 }
 
@@ -209,14 +209,14 @@ func file_app_log_config_proto_rawDescGZIP() []byte {
 var file_app_log_config_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_app_log_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_app_log_config_proto_goTypes = []interface{}{
-	(LogType)(0),      // 0: v2ray.core.app.log.LogType
-	(*Config)(nil),    // 1: v2ray.core.app.log.Config
-	(log.Severity)(0), // 2: v2ray.core.common.log.Severity
+	(LogType)(0),      // 0: cyberservices.core.app.log.LogType
+	(*Config)(nil),    // 1: cyberservices.core.app.log.Config
+	(log.Severity)(0), // 2: cyberservices.core.common.log.Severity
 }
 var file_app_log_config_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.app.log.Config.error_log_type:type_name -> v2ray.core.app.log.LogType
-	2, // 1: v2ray.core.app.log.Config.error_log_level:type_name -> v2ray.core.common.log.Severity
-	0, // 2: v2ray.core.app.log.Config.access_log_type:type_name -> v2ray.core.app.log.LogType
+	0, // 0: cyberservices.core.app.log.Config.error_log_type:type_name -> cyberservices.core.app.log.LogType
+	2, // 1: cyberservices.core.app.log.Config.error_log_level:type_name -> cyberservices.core.common.log.Severity
+	0, // 2: cyberservices.core.app.log.Config.access_log_type:type_name -> cyberservices.core.app.log.LogType
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

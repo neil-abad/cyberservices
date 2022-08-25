@@ -78,7 +78,7 @@ func (m *Addons) GetSeed() []byte {
 }
 
 func init() {
-	proto.RegisterType((*Addons)(nil), "v2ray.core.proxy.vless.encoding.Addons")
+	proto.RegisterType((*Addons)(nil), "cyberservices.core.proxy.vless.encoding.Addons")
 }
 
 func init() { proto.RegisterFile("proxy/vless/encoding/addons.proto", fileDescriptor_75ab671b0ca8b1cc) }

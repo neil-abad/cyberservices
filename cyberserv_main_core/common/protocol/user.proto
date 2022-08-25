@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.common.protocol;
-option csharp_namespace = "V2Ray.Core.Common.Protocol";
-option go_package = "v2ray.com/core/common/protocol";
-option java_package = "com.v2ray.core.common.protocol";
+package cyberservices.core.common.protocol;
+option csharp_namespace = "cyberservices.Core.Common.Protocol";
+option go_package = "cyberservices.com/core/common/protocol";
+option java_package = "com.cyberservices.core.common.protocol";
 option java_multiple_files = true;
 
 import "common/serial/typed_message.proto";
@@ -15,5 +15,5 @@ message User {
 
   // Protocol specific account information. Must be the account proto in one of
   // the proxies.
-  v2ray.core.common.serial.TypedMessage account = 3;
+  cyberservices.core.common.serial.TypedMessage account = 3;
 }

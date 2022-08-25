@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/common"
-	"v2ray.com/core/infra/conf"
-	"v2ray.com/core/infra/conf/serial"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/infra/conf"
+	"cyberservices.com/core/infra/conf/serial"
 )
 
 // ConfigCommand is the json to pb convert struct

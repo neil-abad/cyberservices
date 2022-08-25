@@ -8,10 +8,10 @@ import (
 
 	"github.com/golang/protobuf/proto" // nolint: staticcheck
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/proxy/trojan"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/proxy/trojan"
 )
 
 // TrojanServerTarget is configuration of a single trojan server

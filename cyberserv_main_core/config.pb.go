@@ -12,8 +12,8 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	serial "v2ray.com/core/common/serial"
-	transport "v2ray.com/core/transport"
+	serial "cyberservices.com/core/common/serial"
+	transport "cyberservices.com/core/transport"
 )
 
 const (
@@ -27,7 +27,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// Config is the master config of V2Ray. V2Ray takes this config as input and
+// Config is the master config of cyberservices. Project CS takes this config as input and
 // functions accordingly.
 type Config struct {
 	state         protoimpl.MessageState
@@ -39,7 +39,7 @@ type Config struct {
 	// Outbound handler configurations. Must have at least one item. The first
 	// item is used as default for routing.
 	Outbound []*OutboundHandlerConfig `protobuf:"bytes,2,rep,name=outbound,proto3" json:"outbound,omitempty"`
-	// App is for configurations of all features in V2Ray. A feature must
+	// App is for configurations of all features in cyberservices. A feature must
 	// implement the Feature interface, and its config type must be registered
 	// through common.RegisterConfig.
 	App []*serial.TypedMessage `protobuf:"bytes,4,rep,name=app,proto3" json:"app,omitempty"`
@@ -50,7 +50,7 @@ type Config struct {
 	// Deprecated: Do not use.
 	Transport *transport.Config `protobuf:"bytes,5,opt,name=transport,proto3" json:"transport,omitempty"`
 	// Configuration for extensions. The config may not work if corresponding
-	// extension is not loaded into V2Ray. V2Ray will ignore such config during
+	// extension is not loaded into cyberservices. Project CS will ignore such config during
 	// initialization.
 	Extension []*serial.TypedMessage `protobuf:"bytes,6,rep,name=extension,proto3" json:"extension,omitempty"`
 }
@@ -354,22 +354,22 @@ func file_config_proto_rawDescGZIP() []byte {
 
 var file_config_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_config_proto_goTypes = []interface{}{
-	(*Config)(nil),                // 0: v2ray.core.Config
-	(*InboundHandlerConfig)(nil),  // 1: v2ray.core.InboundHandlerConfig
-	(*OutboundHandlerConfig)(nil), // 2: v2ray.core.OutboundHandlerConfig
-	(*serial.TypedMessage)(nil),   // 3: v2ray.core.common.serial.TypedMessage
-	(*transport.Config)(nil),      // 4: v2ray.core.transport.Config
+	(*Config)(nil),                // 0: cyberservices.core.Config
+	(*InboundHandlerConfig)(nil),  // 1: cyberservices.core.InboundHandlerConfig
+	(*OutboundHandlerConfig)(nil), // 2: cyberservices.core.OutboundHandlerConfig
+	(*serial.TypedMessage)(nil),   // 3: cyberservices.core.common.serial.TypedMessage
+	(*transport.Config)(nil),      // 4: cyberservices.core.transport.Config
 }
 var file_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.Config.inbound:type_name -> v2ray.core.InboundHandlerConfig
-	2, // 1: v2ray.core.Config.outbound:type_name -> v2ray.core.OutboundHandlerConfig
-	3, // 2: v2ray.core.Config.app:type_name -> v2ray.core.common.serial.TypedMessage
-	4, // 3: v2ray.core.Config.transport:type_name -> v2ray.core.transport.Config
-	3, // 4: v2ray.core.Config.extension:type_name -> v2ray.core.common.serial.TypedMessage
-	3, // 5: v2ray.core.InboundHandlerConfig.receiver_settings:type_name -> v2ray.core.common.serial.TypedMessage
-	3, // 6: v2ray.core.InboundHandlerConfig.proxy_settings:type_name -> v2ray.core.common.serial.TypedMessage
-	3, // 7: v2ray.core.OutboundHandlerConfig.sender_settings:type_name -> v2ray.core.common.serial.TypedMessage
-	3, // 8: v2ray.core.OutboundHandlerConfig.proxy_settings:type_name -> v2ray.core.common.serial.TypedMessage
+	1, // 0: cyberservices.core.Config.inbound:type_name -> cyberservices.core.InboundHandlerConfig
+	2, // 1: cyberservices.core.Config.outbound:type_name -> cyberservices.core.OutboundHandlerConfig
+	3, // 2: cyberservices.core.Config.app:type_name -> cyberservices.core.common.serial.TypedMessage
+	4, // 3: cyberservices.core.Config.transport:type_name -> cyberservices.core.transport.Config
+	3, // 4: cyberservices.core.Config.extension:type_name -> cyberservices.core.common.serial.TypedMessage
+	3, // 5: cyberservices.core.InboundHandlerConfig.receiver_settings:type_name -> cyberservices.core.common.serial.TypedMessage
+	3, // 6: cyberservices.core.InboundHandlerConfig.proxy_settings:type_name -> cyberservices.core.common.serial.TypedMessage
+	3, // 7: cyberservices.core.OutboundHandlerConfig.sender_settings:type_name -> cyberservices.core.common.serial.TypedMessage
+	3, // 8: cyberservices.core.OutboundHandlerConfig.proxy_settings:type_name -> cyberservices.core.common.serial.TypedMessage
 	9, // [9:9] is the sub-list for method output_type
 	9, // [9:9] is the sub-list for method input_type
 	9, // [9:9] is the sub-list for extension type_name

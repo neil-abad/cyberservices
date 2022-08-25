@@ -4,24 +4,24 @@ import (
 	"testing"
 
 	proto "github.com/golang/protobuf/proto"
-	. "v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/proxyman"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/features/dns/localdns"
-	_ "v2ray.com/core/main/distro/all"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
+	. "cyberservices.com/core"
+	"cyberservices.com/core/app/dispatcher"
+	"cyberservices.com/core/app/proxyman"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/features/dns"
+	"cyberservices.com/core/features/dns/localdns"
+	_ "cyberservices.com/core/main/distro/all"
+	"cyberservices.com/core/proxy/dokodemo"
+	"cyberservices.com/core/proxy/vmess"
+	"cyberservices.com/core/proxy/vmess/outbound"
+	"cyberservices.com/core/testing/servers/tcp"
 )
 
-func TestV2RayDependency(t *testing.T) {
+func TestProject CSDependency(t *testing.T) {
 	instance := new(Instance)
 
 	wait := make(chan bool, 1)
@@ -35,7 +35,7 @@ func TestV2RayDependency(t *testing.T) {
 	<-wait
 }
 
-func TestV2RayClose(t *testing.T) {
+func TestProject CSClose(t *testing.T) {
 	port := tcp.PickPort()
 
 	userId := uuid.New()

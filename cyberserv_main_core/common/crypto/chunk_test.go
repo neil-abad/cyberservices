@@ -5,9 +5,9 @@ import (
 	"io"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	. "v2ray.com/core/common/crypto"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	. "cyberservices.com/core/common/crypto"
 )
 
 func TestChunkStreamIO(t *testing.T) {

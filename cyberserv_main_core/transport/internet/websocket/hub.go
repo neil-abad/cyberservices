@@ -12,12 +12,12 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/pires/go-proxyproto"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	http_proto "v2ray.com/core/common/protocol/http"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/transport/internet"
-	v2tls "v2ray.com/core/transport/internet/tls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	http_proto "cyberservices.com/core/common/protocol/http"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/transport/internet"
+	v2tls "cyberservices.com/core/transport/internet/tls"
 )
 
 type requestHandler struct {

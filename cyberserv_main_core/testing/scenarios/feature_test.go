@@ -9,30 +9,30 @@ import (
 	"time"
 
 	xproxy "golang.org/x/net/proxy"
-	"v2ray.com/core"
-	"v2ray.com/core/app/dispatcher"
-	"v2ray.com/core/app/log"
-	"v2ray.com/core/app/proxyman"
-	_ "v2ray.com/core/app/proxyman/inbound"
-	_ "v2ray.com/core/app/proxyman/outbound"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	clog "v2ray.com/core/common/log"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/proxy/blackhole"
-	"v2ray.com/core/proxy/dokodemo"
-	"v2ray.com/core/proxy/freedom"
-	v2http "v2ray.com/core/proxy/http"
-	"v2ray.com/core/proxy/socks"
-	"v2ray.com/core/proxy/vmess"
-	"v2ray.com/core/proxy/vmess/inbound"
-	"v2ray.com/core/proxy/vmess/outbound"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/testing/servers/udp"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/dispatcher"
+	"cyberservices.com/core/app/log"
+	"cyberservices.com/core/app/proxyman"
+	_ "cyberservices.com/core/app/proxyman/inbound"
+	_ "cyberservices.com/core/app/proxyman/outbound"
+	"cyberservices.com/core/app/router"
+	"cyberservices.com/core/common"
+	clog "cyberservices.com/core/common/log"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/proxy/blackhole"
+	"cyberservices.com/core/proxy/dokodemo"
+	"cyberservices.com/core/proxy/freedom"
+	v2http "cyberservices.com/core/proxy/http"
+	"cyberservices.com/core/proxy/socks"
+	"cyberservices.com/core/proxy/vmess"
+	"cyberservices.com/core/proxy/vmess/inbound"
+	"cyberservices.com/core/proxy/vmess/outbound"
+	"cyberservices.com/core/testing/servers/tcp"
+	"cyberservices.com/core/testing/servers/udp"
+	"cyberservices.com/core/transport/internet"
 )
 
 func TestPassiveConnection(t *testing.T) {
@@ -645,7 +645,7 @@ func TestDomainSniffing(t *testing.T) {
 	}
 }
 
-func TestDialV2Ray(t *testing.T) {
+func TestDialProject CS(t *testing.T) {
 	tcpServer := tcp.Server{
 		MsgProcessor: xor,
 	}

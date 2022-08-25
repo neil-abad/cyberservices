@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.proxyman.command;
-option csharp_namespace = "V2Ray.Core.App.Proxyman.Command";
-option go_package = "v2ray.com/core/app/proxyman/command";
-option java_package = "com.v2ray.core.app.proxyman.command";
+package cyberservices.core.app.proxyman.command;
+option csharp_namespace = "cyberservices.Core.App.Proxyman.Command";
+option go_package = "cyberservices.com/core/app/proxyman/command";
+option java_package = "com.cyberservices.core.app.proxyman.command";
 option java_multiple_files = true;
 
 import "common/protocol/user.proto";
@@ -11,7 +11,7 @@ import "common/serial/typed_message.proto";
 import "config.proto";
 
 message AddUserOperation {
-  v2ray.core.common.protocol.User user = 1;
+  cyberservices.core.common.protocol.User user = 1;
 }
 
 message RemoveUserOperation {
@@ -32,7 +32,7 @@ message RemoveInboundResponse {}
 
 message AlterInboundRequest {
   string tag = 1;
-  v2ray.core.common.serial.TypedMessage operation = 2;
+  cyberservices.core.common.serial.TypedMessage operation = 2;
 }
 
 message AlterInboundResponse {}
@@ -51,7 +51,7 @@ message RemoveOutboundResponse {}
 
 message AlterOutboundRequest {
   string tag = 1;
-  v2ray.core.common.serial.TypedMessage operation = 2;
+  cyberservices.core.common.serial.TypedMessage operation = 2;
 }
 
 message AlterOutboundResponse {}

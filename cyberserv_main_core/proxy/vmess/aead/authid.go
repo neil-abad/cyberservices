@@ -11,8 +11,8 @@ import (
 	"io"
 	"math"
 	"time"
-	"v2ray.com/core/common"
-	antiReplayWindow "v2ray.com/core/common/antireplay"
+	"cyberservices.com/core/common"
+	antiReplayWindow "cyberservices.com/core/common/antireplay"
 )
 
 func CreateAuthID(cmdKey []byte, time int64) [16]byte {

@@ -7,9 +7,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"v2ray.com/core/app/stats"
-	. "v2ray.com/core/app/stats/command"
-	"v2ray.com/core/common"
+	"cyberservices.com/core/app/stats"
+	. "cyberservices.com/core/app/stats/command"
+	"cyberservices.com/core/common"
 )
 
 func TestGetStats(t *testing.T) {

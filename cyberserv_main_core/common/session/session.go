@@ -1,13 +1,13 @@
 // Package session provides functions for sessions of incoming requests.
-package session // import "v2ray.com/core/common/session"
+package session // import "cyberservices.com/core/common/session"
 
 import (
 	"context"
 	"math/rand"
 
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
+	"cyberservices.com/core/common/errors"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
 )
 
 // ID of a session.

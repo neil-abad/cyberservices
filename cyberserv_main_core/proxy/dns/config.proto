@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.dns;
-option csharp_namespace = "V2Ray.Core.Proxy.Dns";
-option go_package = "v2ray.com/core/proxy/dns";
-option java_package = "com.v2ray.core.proxy.dns";
+package cyberservices.core.proxy.dns;
+option csharp_namespace = "cyberservices.Core.Proxy.Dns";
+option go_package = "cyberservices.com/core/proxy/dns";
+option java_package = "com.cyberservices.core.proxy.dns";
 option java_multiple_files = true;
 
 import "common/net/destination.proto";
@@ -11,5 +11,5 @@ import "common/net/destination.proto";
 message Config {
   // Server is the DNS server address. If specified, this address overrides the
   // original one.
-  v2ray.core.common.net.Endpoint server = 1;
+  cyberservices.core.common.net.Endpoint server = 1;
 }

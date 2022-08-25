@@ -7,20 +7,20 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/cmdarg"
-	"v2ray.com/core/main/confloader"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/cmdarg"
+	"cyberservices.com/core/main/confloader"
 )
 
-// ConfigFormat is a configurable format of V2Ray config file.
+// ConfigFormat is a configurable format of Project CS config file.
 type ConfigFormat struct {
 	Name      string
 	Extension []string
 	Loader    ConfigLoader
 }
 
-// ConfigLoader is a utility to load V2Ray config from external source.
+// ConfigLoader is a utility to load Project CS config from external source.
 type ConfigLoader func(input interface{}) (*Config, error)
 
 var (

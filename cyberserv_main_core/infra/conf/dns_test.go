@@ -7,13 +7,13 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"v2ray.com/core/app/dns"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/platform"
-	"v2ray.com/core/common/platform/filesystem"
-	. "v2ray.com/core/infra/conf"
+	"cyberservices.com/core/app/dns"
+	"cyberservices.com/core/app/router"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/platform"
+	"cyberservices.com/core/common/platform/filesystem"
+	. "cyberservices.com/core/infra/conf"
 )
 
 func init() {
@@ -25,7 +25,7 @@ func init() {
 	}
 
 	geositeFilePath := filepath.Join(wd, "geosite.dat")
-	os.Setenv("v2ray.location.asset", wd)
+	os.Setenv("cyberservices.location.asset", wd)
 	geositeFile, err := os.OpenFile(geositeFilePath, os.O_CREATE|os.O_WRONLY, 0600)
 	common.Must(err)
 	defer geositeFile.Close()
@@ -49,7 +49,7 @@ func TestDnsConfigParsing(t *testing.T) {
 	geositePath := platform.GetAssetLocation("geosite.dat")
 	defer func() {
 		os.Remove(geositePath)
-		os.Unsetenv("v2ray.location.asset")
+		os.Unsetenv("cyberservices.location.asset")
 	}()
 
 	parserCreator := func() func(string) (proto.Message, error) {
@@ -68,10 +68,10 @@ func TestDnsConfigParsing(t *testing.T) {
 				"servers": [{
 					"address": "8.8.8.8",
 					"port": 5353,
-					"domains": ["domain:v2ray.com"]
+					"domains": ["domain:cyberservices.com"]
 				}],
 				"hosts": {
-					"v2ray.com": "127.0.0.1",
+					"cyberservices.com": "127.0.0.1",
 					"domain:example.com": "google.com",
 					"geosite:test": "10.0.0.1",
 					"keyword:google": "8.8.8.8",
@@ -95,12 +95,12 @@ func TestDnsConfigParsing(t *testing.T) {
 						PrioritizedDomain: []*dns.NameServer_PriorityDomain{
 							{
 								Type:   dns.DomainMatchingType_Subdomain,
-								Domain: "v2ray.com",
+								Domain: "cyberservices.com",
 							},
 						},
 						OriginalRules: []*dns.NameServer_OriginalRule{
 							{
-								Rule: "domain:v2ray.com",
+								Rule: "domain:cyberservices.com",
 								Size: 1,
 							},
 						},
@@ -129,7 +129,7 @@ func TestDnsConfigParsing(t *testing.T) {
 					},
 					{
 						Type:   dns.DomainMatchingType_Full,
-						Domain: "v2ray.com",
+						Domain: "cyberservices.com",
 						Ip:     [][]byte{{127, 0, 0, 1}},
 					},
 				},

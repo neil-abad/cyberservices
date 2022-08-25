@@ -3,8 +3,8 @@
 package vless
 
 import (
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/uuid"
 )
 
 // AsAccount implements protocol.Account.AsAccount().

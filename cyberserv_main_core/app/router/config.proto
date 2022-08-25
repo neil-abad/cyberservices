@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.router;
-option csharp_namespace = "V2Ray.Core.App.Router";
-option go_package = "v2ray.com/core/app/router";
-option java_package = "com.v2ray.core.app.router";
+package cyberservices.core.app.router;
+option csharp_namespace = "cyberservices.Core.App.Router";
+option go_package = "cyberservices.com/core/app/router";
+option java_package = "com.cyberservices.core.app.router";
 option java_multiple_files = true;
 
 import "common/net/port.proto";
@@ -93,16 +93,16 @@ message RoutingRule {
 
   // A range of port [from, to]. If the destination port is in this range, this
   // rule takes effect. Deprecated. Use port_list.
-  v2ray.core.common.net.PortRange port_range = 4 [deprecated = true];
+  cyberservices.core.common.net.PortRange port_range = 4 [deprecated = true];
 
   // List of ports.
-  v2ray.core.common.net.PortList port_list = 14;
+  cyberservices.core.common.net.PortList port_list = 14;
 
   // List of networks. Deprecated. Use networks.
-  v2ray.core.common.net.NetworkList network_list = 5 [deprecated = true];
+  cyberservices.core.common.net.NetworkList network_list = 5 [deprecated = true];
 
   // List of networks for matching.
-  repeated v2ray.core.common.net.Network networks = 13;
+  repeated cyberservices.core.common.net.Network networks = 13;
 
   // List of CIDRs for source IP address matching.
   repeated CIDR source_cidr = 6 [deprecated = true];
@@ -112,7 +112,7 @@ message RoutingRule {
   repeated GeoIP source_geoip = 11;
 
   // List of ports for source port matching.
-  v2ray.core.common.net.PortList source_port_list = 16;
+  cyberservices.core.common.net.PortList source_port_list = 16;
 
   repeated string user_email = 7;
   repeated string inbound_tag = 8;

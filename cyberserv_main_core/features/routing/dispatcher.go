@@ -3,9 +3,7 @@ package routing
 import (
 	"context"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/features"
-	"v2ray.com/core/transport"
+	
 )
 
 //

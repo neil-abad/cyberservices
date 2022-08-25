@@ -18,27 +18,27 @@ cleanup() { rm -rf "$TMP"; }
 trap cleanup INT TERM ERR
 
 get_source() {
-	echo ">>> Clone v2fly/v2ray-core repo..."
-	git clone https://github.com/v2fly/v2ray-core.git
-	cd v2ray-core
+	echo ">>> Clone v2fly/Project CS-core repo..."
+	git clone https://github.com/v2fly/Project CS-core.git
+	cd Project CS-core
 	go mod download
 }
 
 build_v2() {
 	if [[ $nosource != 1 ]]; then
-		cd ${SRCDIR}/v2ray-core
+		cd ${SRCDIR}/Project CS-core
 		local VERSIONTAG=$(git describe --abbrev=0 --tags)
 	else
 		echo ">>> Use current directory as WORKDIR"
 		local VERSIONTAG=$(git describe --abbrev=0 --tags)
 	fi
 
-	LDFLAGS="-s -w -buildid= -X v2ray.codename=${CODENAME} -X v2ray.build=${BUILDNAME} -X v2ray.version=${VERSIONTAG}"
+	LDFLAGS="-s -w -buildid= -X cyberservices.codename=${CODENAME} -X cyberservices.build=${BUILDNAME} -X cyberservices.version=${VERSIONTAG}"
 
-	echo ">>> Compile v2ray ..."
-	env CGO_ENABLED=0 go build -o "$TMP"/v2ray"${EXESUFFIX}" -ldflags "$LDFLAGS" ./main
+	echo ">>> Compile Project CS ..."
+	env CGO_ENABLED=0 go build -o "$TMP"/Project CS"${EXESUFFIX}" -ldflags "$LDFLAGS" ./main
 	if [[ $GOOS == "windows" ]]; then
-		env CGO_ENABLED=0 go build -o "$TMP"/wv2ray"${EXESUFFIX}" -ldflags "-H windowsgui $LDFLAGS" ./main
+		env CGO_ENABLED=0 go build -o "$TMP"/wProject CS"${EXESUFFIX}" -ldflags "-H windowsgui $LDFLAGS" ./main
 	fi
 
 	echo ">>> Compile v2ctl ..."
@@ -66,7 +66,7 @@ copyconf() {
 packzip() {
 	echo ">>> Generating zip package"
 	cd "$TMP"
-	local PKG=${SRCDIR}/v2ray-custom-${GOARCH}-${GOOS}-${PKGSUFFIX}${NOW}.zip
+	local PKG=${SRCDIR}/Project CS-custom-${GOARCH}-${GOOS}-${PKGSUFFIX}${NOW}.zip
 	zip -r "$PKG" .
 	echo ">>> Generated: $(basename "$PKG") at $(dirname "$PKG")"
 }
@@ -74,7 +74,7 @@ packzip() {
 packtgz() {
 	echo ">>> Generating tgz package"
 	cd "$TMP"
-	local PKG=${SRCDIR}/v2ray-custom-${GOARCH}-${GOOS}-${PKGSUFFIX}${NOW}.tar.gz
+	local PKG=${SRCDIR}/Project CS-custom-${GOARCH}-${GOOS}-${PKGSUFFIX}${NOW}.tar.gz
 	tar cvfz "$PKG" .
 	echo ">>> Generated: $(basename "$PKG") at $(dirname "$PKG")"
 }

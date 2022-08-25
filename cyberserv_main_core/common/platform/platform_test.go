@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"testing"
 
-	"v2ray.com/core/common"
-	. "v2ray.com/core/common/platform"
+	"cyberservices.com/core/common"
+	. "cyberservices.com/core/common/platform"
 )
 
 func TestNormalizeEnvName(t *testing.T) {
@@ -52,13 +52,13 @@ func TestGetAssetLocation(t *testing.T) {
 		t.Error("asset dir: ", loc, " not in ", exec)
 	}
 
-	os.Setenv("v2ray.location.asset", "/v2ray")
+	os.Setenv("cyberservices.location.asset", "/Project CS")
 	if runtime.GOOS == "windows" {
-		if v := GetAssetLocation("t"); v != "\\v2ray\\t" {
+		if v := GetAssetLocation("t"); v != "\\Project CS\\t" {
 			t.Error("asset loc: ", v)
 		}
 	} else {
-		if v := GetAssetLocation("t"); v != "/v2ray/t" {
+		if v := GetAssetLocation("t"); v != "/Project CS/t" {
 			t.Error("asset loc: ", v)
 		}
 	}

@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/lucas-clemente/quic-go"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/tls"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/tls"
 )
 
 type sessionContext struct {

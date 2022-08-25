@@ -8,17 +8,17 @@ import (
 
 	proto "github.com/golang/protobuf/proto"
 
-	. "v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/platform"
-	"v2ray.com/core/common/platform/filesystem"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/protocol/http"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/features/routing"
-	routing_session "v2ray.com/core/features/routing/session"
+	. "cyberservices.com/core/app/router"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/errors"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/platform"
+	"cyberservices.com/core/common/platform/filesystem"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/protocol/http"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/features/routing"
+	routing_session "cyberservices.com/core/features/routing/session"
 )
 
 func init() {
@@ -63,7 +63,7 @@ func TestRoutingRule(t *testing.T) {
 			rule: &RoutingRule{
 				Domain: []*Domain{
 					{
-						Value: "v2ray.com",
+						Value: "cyberservices.com",
 						Type:  Domain_Plain,
 					},
 					{
@@ -78,15 +78,15 @@ func TestRoutingRule(t *testing.T) {
 			},
 			test: []ruleTest{
 				{
-					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("v2ray.com"), 80)}),
+					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("cyberservices.com"), 80)}),
 					output: true,
 				},
 				{
-					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("www.v2ray.com.www"), 80)}),
+					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("www.cyberservices.com.www"), 80)}),
 					output: true,
 				},
 				{
-					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("v2ray.co"), 80)}),
+					input:  withOutbound(&session.Outbound{Target: net.TCPDestination(net.DomainAddress("cyberservices.co"), 80)}),
 					output: false,
 				},
 				{
@@ -206,16 +206,16 @@ func TestRoutingRule(t *testing.T) {
 		{
 			rule: &RoutingRule{
 				UserEmail: []string{
-					"admin@v2ray.com",
+					"admin@cyberservices.com",
 				},
 			},
 			test: []ruleTest{
 				{
-					input:  withInbound(&session.Inbound{User: &protocol.MemoryUser{Email: "admin@v2ray.com"}}),
+					input:  withInbound(&session.Inbound{User: &protocol.MemoryUser{Email: "admin@cyberservices.com"}}),
 					output: true,
 				},
 				{
-					input:  withInbound(&session.Inbound{User: &protocol.MemoryUser{Email: "love@v2ray.com"}}),
+					input:  withInbound(&session.Inbound{User: &protocol.MemoryUser{Email: "love@cyberservices.com"}}),
 					output: false,
 				},
 				{

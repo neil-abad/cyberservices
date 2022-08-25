@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "cyberservices.com/core/common/protocol"
 )
 
 const (
@@ -221,13 +221,13 @@ func file_proxy_vless_inbound_config_proto_rawDescGZIP() []byte {
 
 var file_proxy_vless_inbound_config_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_proxy_vless_inbound_config_proto_goTypes = []interface{}{
-	(*Fallback)(nil),      // 0: v2ray.core.proxy.vless.inbound.Fallback
-	(*Config)(nil),        // 1: v2ray.core.proxy.vless.inbound.Config
-	(*protocol.User)(nil), // 2: v2ray.core.common.protocol.User
+	(*Fallback)(nil),      // 0: cyberservices.core.proxy.vless.inbound.Fallback
+	(*Config)(nil),        // 1: cyberservices.core.proxy.vless.inbound.Config
+	(*protocol.User)(nil), // 2: cyberservices.core.common.protocol.User
 }
 var file_proxy_vless_inbound_config_proto_depIdxs = []int32{
-	2, // 0: v2ray.core.proxy.vless.inbound.Config.clients:type_name -> v2ray.core.common.protocol.User
-	0, // 1: v2ray.core.proxy.vless.inbound.Config.fallbacks:type_name -> v2ray.core.proxy.vless.inbound.Fallback
+	2, // 0: cyberservices.core.proxy.vless.inbound.Config.clients:type_name -> cyberservices.core.common.protocol.User
+	0, // 1: cyberservices.core.proxy.vless.inbound.Config.fallbacks:type_name -> cyberservices.core.proxy.vless.inbound.Fallback
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

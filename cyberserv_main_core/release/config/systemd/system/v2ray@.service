@@ -1,5 +1,5 @@
 [Unit]
-Description=V2Ray Service
+Description=Project CS Service
 Documentation=https://www.v2fly.org/
 After=network.target nss-lookup.target
 
@@ -8,7 +8,7 @@ User=nobody
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/v2ray -config /usr/local/etc/v2ray/%i.json
+ExecStart=/usr/local/bin/Project CS -config /usr/local/etc/Project CS/%i.json
 Restart=on-failure
 RestartPreventExitStatus=23
 

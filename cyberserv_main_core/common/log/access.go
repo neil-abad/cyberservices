@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"v2ray.com/core/common/serial"
+	"cyberservices.com/core/common/serial"
 )
 
 type logKey int

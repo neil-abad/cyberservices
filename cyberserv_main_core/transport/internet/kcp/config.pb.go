@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	serial "v2ray.com/core/common/serial"
+	serial "cyberservices.com/core/common/serial"
 )
 
 const (
@@ -614,26 +614,26 @@ func file_transport_internet_kcp_config_proto_rawDescGZIP() []byte {
 
 var file_transport_internet_kcp_config_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_transport_internet_kcp_config_proto_goTypes = []interface{}{
-	(*MTU)(nil),                 // 0: v2ray.core.transport.internet.kcp.MTU
-	(*TTI)(nil),                 // 1: v2ray.core.transport.internet.kcp.TTI
-	(*UplinkCapacity)(nil),      // 2: v2ray.core.transport.internet.kcp.UplinkCapacity
-	(*DownlinkCapacity)(nil),    // 3: v2ray.core.transport.internet.kcp.DownlinkCapacity
-	(*WriteBuffer)(nil),         // 4: v2ray.core.transport.internet.kcp.WriteBuffer
-	(*ReadBuffer)(nil),          // 5: v2ray.core.transport.internet.kcp.ReadBuffer
-	(*ConnectionReuse)(nil),     // 6: v2ray.core.transport.internet.kcp.ConnectionReuse
-	(*EncryptionSeed)(nil),      // 7: v2ray.core.transport.internet.kcp.EncryptionSeed
-	(*Config)(nil),              // 8: v2ray.core.transport.internet.kcp.Config
-	(*serial.TypedMessage)(nil), // 9: v2ray.core.common.serial.TypedMessage
+	(*MTU)(nil),                 // 0: cyberservices.core.transport.internet.kcp.MTU
+	(*TTI)(nil),                 // 1: cyberservices.core.transport.internet.kcp.TTI
+	(*UplinkCapacity)(nil),      // 2: cyberservices.core.transport.internet.kcp.UplinkCapacity
+	(*DownlinkCapacity)(nil),    // 3: cyberservices.core.transport.internet.kcp.DownlinkCapacity
+	(*WriteBuffer)(nil),         // 4: cyberservices.core.transport.internet.kcp.WriteBuffer
+	(*ReadBuffer)(nil),          // 5: cyberservices.core.transport.internet.kcp.ReadBuffer
+	(*ConnectionReuse)(nil),     // 6: cyberservices.core.transport.internet.kcp.ConnectionReuse
+	(*EncryptionSeed)(nil),      // 7: cyberservices.core.transport.internet.kcp.EncryptionSeed
+	(*Config)(nil),              // 8: cyberservices.core.transport.internet.kcp.Config
+	(*serial.TypedMessage)(nil), // 9: cyberservices.core.common.serial.TypedMessage
 }
 var file_transport_internet_kcp_config_proto_depIdxs = []int32{
-	0, // 0: v2ray.core.transport.internet.kcp.Config.mtu:type_name -> v2ray.core.transport.internet.kcp.MTU
-	1, // 1: v2ray.core.transport.internet.kcp.Config.tti:type_name -> v2ray.core.transport.internet.kcp.TTI
-	2, // 2: v2ray.core.transport.internet.kcp.Config.uplink_capacity:type_name -> v2ray.core.transport.internet.kcp.UplinkCapacity
-	3, // 3: v2ray.core.transport.internet.kcp.Config.downlink_capacity:type_name -> v2ray.core.transport.internet.kcp.DownlinkCapacity
-	4, // 4: v2ray.core.transport.internet.kcp.Config.write_buffer:type_name -> v2ray.core.transport.internet.kcp.WriteBuffer
-	5, // 5: v2ray.core.transport.internet.kcp.Config.read_buffer:type_name -> v2ray.core.transport.internet.kcp.ReadBuffer
-	9, // 6: v2ray.core.transport.internet.kcp.Config.header_config:type_name -> v2ray.core.common.serial.TypedMessage
-	7, // 7: v2ray.core.transport.internet.kcp.Config.seed:type_name -> v2ray.core.transport.internet.kcp.EncryptionSeed
+	0, // 0: cyberservices.core.transport.internet.kcp.Config.mtu:type_name -> cyberservices.core.transport.internet.kcp.MTU
+	1, // 1: cyberservices.core.transport.internet.kcp.Config.tti:type_name -> cyberservices.core.transport.internet.kcp.TTI
+	2, // 2: cyberservices.core.transport.internet.kcp.Config.uplink_capacity:type_name -> cyberservices.core.transport.internet.kcp.UplinkCapacity
+	3, // 3: cyberservices.core.transport.internet.kcp.Config.downlink_capacity:type_name -> cyberservices.core.transport.internet.kcp.DownlinkCapacity
+	4, // 4: cyberservices.core.transport.internet.kcp.Config.write_buffer:type_name -> cyberservices.core.transport.internet.kcp.WriteBuffer
+	5, // 5: cyberservices.core.transport.internet.kcp.Config.read_buffer:type_name -> cyberservices.core.transport.internet.kcp.ReadBuffer
+	9, // 6: cyberservices.core.transport.internet.kcp.Config.header_config:type_name -> cyberservices.core.common.serial.TypedMessage
+	7, // 7: cyberservices.core.transport.internet.kcp.Config.seed:type_name -> cyberservices.core.transport.internet.kcp.EncryptionSeed
 	8, // [8:8] is the sub-list for method output_type
 	8, // [8:8] is the sub-list for method input_type
 	8, // [8:8] is the sub-list for extension type_name

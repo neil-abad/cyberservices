@@ -3,8 +3,8 @@ package internet
 import (
 	"context"
 
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/session"
 )
 
 // Dialer is the interface for dialing outbound connections.

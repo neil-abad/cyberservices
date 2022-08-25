@@ -1,6 +1,6 @@
 package udp
 
-import "v2ray.com/core/common/errors"
+import "cyberservices.com/core/common/errors"
 
 type errPathObjHolder struct{}
 

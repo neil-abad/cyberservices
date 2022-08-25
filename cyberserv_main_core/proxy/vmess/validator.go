@@ -12,12 +12,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/dice"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/serial"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/proxy/vmess/aead"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/dice"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/serial"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/proxy/vmess/aead"
 )
 
 const (

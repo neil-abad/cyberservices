@@ -2,16 +2,16 @@
 
 package command
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
 
 	grpc "google.golang.org/grpc"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/log"
-	"v2ray.com/core/common"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/log"
+	"cyberservices.com/core/common"
 )
 
 type LoggerServer struct {

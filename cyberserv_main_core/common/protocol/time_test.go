@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	. "v2ray.com/core/common/protocol"
+	. "cyberservices.com/core/common/protocol"
 )
 
 func TestGenerateRandomInt64InRange(t *testing.T) {

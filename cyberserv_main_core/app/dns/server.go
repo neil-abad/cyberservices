@@ -2,7 +2,7 @@
 
 package dns
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
@@ -13,17 +13,17 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/app/router"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/errors"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/strmatcher"
-	"v2ray.com/core/common/uuid"
-	"v2ray.com/core/features"
-	"v2ray.com/core/features/dns"
-	"v2ray.com/core/features/routing"
+	"cyberservices.com/core"
+	"cyberservices.com/core/app/router"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/errors"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/common/strmatcher"
+	"cyberservices.com/core/common/uuid"
+	"cyberservices.com/core/features"
+	"cyberservices.com/core/features/dns"
+	"cyberservices.com/core/features/routing"
 )
 
 // Server is a DNS rely server.
@@ -69,7 +69,7 @@ func (c *MultiGeoIPMatcher) HasMatcher() bool {
 
 func generateRandomTag() string {
 	id := uuid.New()
-	return "v2ray.system." + id.String()
+	return "cyberservices.system." + id.String()
 }
 
 // New creates a new DNS server with given configuration.

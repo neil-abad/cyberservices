@@ -3,8 +3,8 @@ package protocol_test
 import (
 	"testing"
 
-	. "v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
+	. "cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/uuid"
 )
 
 func TestIdEquals(t *testing.T) {

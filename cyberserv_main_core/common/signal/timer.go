@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/task"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/task"
 )
 
 type ActivityUpdater interface {

@@ -5,11 +5,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol"
-	. "v2ray.com/core/proxy/shadowsocks"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol"
+	. "cyberservices.com/core/proxy/shadowsocks"
 )
 
 func toAccount(a *Account) protocol.Account {
@@ -25,7 +25,7 @@ func TestUDPEncoding(t *testing.T) {
 		Address: net.LocalHostIP,
 		Port:    1234,
 		User: &protocol.MemoryUser{
-			Email: "love@v2ray.com",
+			Email: "love@cyberservices.com",
 			Account: toAccount(&Account{
 				Password:   "shadowsocks-password",
 				CipherType: CipherType_AES_128_CFB,
@@ -62,7 +62,7 @@ func TestTCPRequest(t *testing.T) {
 				Address: net.LocalHostIP,
 				Port:    1234,
 				User: &protocol.MemoryUser{
-					Email: "love@v2ray.com",
+					Email: "love@cyberservices.com",
 					Account: toAccount(&Account{
 						Password:   "tcp-password",
 						CipherType: CipherType_CHACHA20,
@@ -78,7 +78,7 @@ func TestTCPRequest(t *testing.T) {
 				Address: net.LocalHostIPv6,
 				Port:    1234,
 				User: &protocol.MemoryUser{
-					Email: "love@v2ray.com",
+					Email: "love@cyberservices.com",
 					Account: toAccount(&Account{
 						Password:   "password",
 						CipherType: CipherType_AES_256_CFB,
@@ -91,10 +91,10 @@ func TestTCPRequest(t *testing.T) {
 			request: &protocol.RequestHeader{
 				Version: Version,
 				Command: protocol.RequestCommandTCP,
-				Address: net.DomainAddress("v2ray.com"),
+				Address: net.DomainAddress("cyberservices.com"),
 				Port:    1234,
 				User: &protocol.MemoryUser{
-					Email: "love@v2ray.com",
+					Email: "love@cyberservices.com",
 					Account: toAccount(&Account{
 						Password:   "password",
 						CipherType: CipherType_CHACHA20_IETF,
@@ -150,7 +150,7 @@ func TestUDPReaderWriter(t *testing.T) {
 		Writer: cache,
 		Request: &protocol.RequestHeader{
 			Version: Version,
-			Address: net.DomainAddress("v2ray.com"),
+			Address: net.DomainAddress("cyberservices.com"),
 			Port:    123,
 			User:    user,
 		},

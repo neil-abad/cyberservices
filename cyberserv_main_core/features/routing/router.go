@@ -1,13 +1,13 @@
 package routing
 
 import (
-	"v2ray.com/core/common"
-	"v2ray.com/core/features"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/features"
 )
 
 // Router is a feature to choose an outbound tag for the given request.
 //
-// v2ray:api:stable
+// Project CS:api:stable
 type Router interface {
 	features.Feature
 
@@ -17,7 +17,7 @@ type Router interface {
 
 // Route is the routing result of Router feature.
 //
-// v2ray:api:stable
+// Project CS:api:stable
 type Route interface {
 	// A Route is also a routing context.
 	Context
@@ -31,7 +31,7 @@ type Route interface {
 
 // RouterType return the type of Router interface. Can be used to implement common.HasType.
 //
-// v2ray:api:stable
+// Project CS:api:stable
 func RouterType() interface{} {
 	return (*Router)(nil)
 }

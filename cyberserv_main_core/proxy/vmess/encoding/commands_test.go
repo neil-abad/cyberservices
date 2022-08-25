@@ -5,11 +5,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/uuid"
-	. "v2ray.com/core/proxy/vmess/encoding"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/uuid"
+	. "cyberservices.com/core/proxy/vmess/encoding"
 )
 
 func TestSwitchAccount(t *testing.T) {

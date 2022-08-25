@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/testing/servers/tcp"
-	"v2ray.com/core/transport/internet"
-	. "v2ray.com/core/transport/internet/tcp"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/testing/servers/tcp"
+	"cyberservices.com/core/transport/internet"
+	. "cyberservices.com/core/transport/internet/tcp"
 )
 
 func TestGetOriginalDestination(t *testing.T) {

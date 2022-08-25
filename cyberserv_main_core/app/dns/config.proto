@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.dns;
-option csharp_namespace = "V2Ray.Core.App.Dns";
-option go_package = "v2ray.com/core/app/dns";
-option java_package = "com.v2ray.core.app.dns";
+package cyberservices.core.app.dns;
+option csharp_namespace = "cyberservices.Core.App.Dns";
+option go_package = "cyberservices.com/core/app/dns";
+option java_package = "com.cyberservices.core.app.dns";
 option java_multiple_files = true;
 
 import "common/net/address.proto";
@@ -11,7 +11,7 @@ import "common/net/destination.proto";
 import "app/router/config.proto";
 
 message NameServer {
-  v2ray.core.common.net.Endpoint address = 1;
+  cyberservices.core.common.net.Endpoint address = 1;
 
   message PriorityDomain {
     DomainMatchingType type = 1;
@@ -24,7 +24,7 @@ message NameServer {
   }
 
   repeated PriorityDomain prioritized_domain = 2;
-  repeated v2ray.core.app.router.GeoIP geoip = 3;
+  repeated cyberservices.core.app.router.GeoIP geoip = 3;
   repeated OriginalRule original_rules = 4;
 }
 
@@ -39,14 +39,14 @@ message Config {
   // Nameservers used by this DNS. Only traditional UDP servers are support at
   // the moment. A special value 'localhost' as a domain address can be set to
   // use DNS on local system.
-  repeated v2ray.core.common.net.Endpoint NameServers = 1 [deprecated = true];
+  repeated cyberservices.core.common.net.Endpoint NameServers = 1 [deprecated = true];
 
   // NameServer list used by this DNS client.
   repeated NameServer name_server = 5;
 
   // Static hosts. Domain to IP.
   // Deprecated. Use static_hosts.
-  map<string, v2ray.core.common.net.IPOrDomain> Hosts = 2 [deprecated = true];
+  map<string, cyberservices.core.common.net.IPOrDomain> Hosts = 2 [deprecated = true];
 
   // Client IP for EDNS client subnet. Must be 4 bytes (IPv4) or 16 bytes
   // (IPv6).
@@ -59,7 +59,7 @@ message Config {
     repeated bytes ip = 3;
 
     // ProxiedDomain indicates the mapped domain has the same IP address on this
-    // domain. V2Ray will use this domain for IP queries. This field is only
+    // domain. Project CS will use this domain for IP queries. This field is only
     // effective if ip is empty.
     string proxied_domain = 4;
   }

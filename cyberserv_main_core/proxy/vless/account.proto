@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.proxy.vless;
-option csharp_namespace = "V2Ray.Core.Proxy.Vless";
-option go_package = "v2ray.com/core/proxy/vless";
-option java_package = "com.v2ray.core.proxy.vless";
+package cyberservices.core.proxy.vless;
+option csharp_namespace = "cyberservices.Core.Proxy.Vless";
+option go_package = "cyberservices.com/core/proxy/vless";
+option java_package = "com.cyberservices.core.proxy.vless";
 option java_multiple_files = true;
 
 message Account {

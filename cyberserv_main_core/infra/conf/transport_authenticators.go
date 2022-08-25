@@ -5,13 +5,13 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	"v2ray.com/core/transport/internet/headers/http"
-	"v2ray.com/core/transport/internet/headers/noop"
-	"v2ray.com/core/transport/internet/headers/srtp"
-	"v2ray.com/core/transport/internet/headers/tls"
-	"v2ray.com/core/transport/internet/headers/utp"
-	"v2ray.com/core/transport/internet/headers/wechat"
-	"v2ray.com/core/transport/internet/headers/wireguard"
+	"cyberservices.com/core/transport/internet/headers/http"
+	"cyberservices.com/core/transport/internet/headers/noop"
+	"cyberservices.com/core/transport/internet/headers/srtp"
+	"cyberservices.com/core/transport/internet/headers/tls"
+	"cyberservices.com/core/transport/internet/headers/utp"
+	"cyberservices.com/core/transport/internet/headers/wechat"
+	"cyberservices.com/core/transport/internet/headers/wireguard"
 )
 
 type NoOpAuthenticator struct{}

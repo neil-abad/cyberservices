@@ -1,6 +1,6 @@
 package external
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"bytes"
@@ -12,9 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/platform/ctlcmd"
-	"v2ray.com/core/main/confloader"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/platform/ctlcmd"
+	"cyberservices.com/core/main/confloader"
 )
 
 func ConfigLoader(arg string) (out io.Reader, err error) {

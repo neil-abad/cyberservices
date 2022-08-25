@@ -12,7 +12,7 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	protocol "v2ray.com/core/common/protocol"
+	protocol "cyberservices.com/core/common/protocol"
 )
 
 const (
@@ -112,11 +112,11 @@ func file_proxy_vmess_outbound_config_proto_rawDescGZIP() []byte {
 
 var file_proxy_vmess_outbound_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_proxy_vmess_outbound_config_proto_goTypes = []interface{}{
-	(*Config)(nil),                  // 0: v2ray.core.proxy.vmess.outbound.Config
-	(*protocol.ServerEndpoint)(nil), // 1: v2ray.core.common.protocol.ServerEndpoint
+	(*Config)(nil),                  // 0: cyberservices.core.proxy.vmess.outbound.Config
+	(*protocol.ServerEndpoint)(nil), // 1: cyberservices.core.common.protocol.ServerEndpoint
 }
 var file_proxy_vmess_outbound_config_proto_depIdxs = []int32{
-	1, // 0: v2ray.core.proxy.vmess.outbound.Config.Receiver:type_name -> v2ray.core.common.protocol.ServerEndpoint
+	1, // 0: cyberservices.core.proxy.vmess.outbound.Config.Receiver:type_name -> cyberservices.core.common.protocol.ServerEndpoint
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

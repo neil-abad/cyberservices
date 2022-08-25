@@ -15,15 +15,15 @@ import (
 	"time"
 
 	"golang.org/x/net/dns/dnsmessage"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/protocol/dns"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal/pubsub"
-	"v2ray.com/core/common/task"
-	dns_feature "v2ray.com/core/features/dns"
-	"v2ray.com/core/features/routing"
-	"v2ray.com/core/transport/internet"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/protocol/dns"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/common/signal/pubsub"
+	"cyberservices.com/core/common/task"
+	dns_feature "cyberservices.com/core/features/dns"
+	"cyberservices.com/core/features/routing"
+	"cyberservices.com/core/transport/internet"
 )
 
 // DoHNameServer implemented DNS over HTTPS (RFC8484) Wire Format,
@@ -51,8 +51,8 @@ func NewDoHNameServer(url *url.URL, dispatcher routing.Dispatcher, clientIP net.
 	// This makes DOH inefficient without a keep-alived connection
 	// See: core/app/proxyman/outbound/handler.go:113
 	// Using mux (https request wrapped in a stream layer) improves the situation.
-	// Recommend to use NewDoHLocalNameServer (DOHL:) if v2ray instance is running on
-	//  a normal network eg. the server side of v2ray
+	// Recommend to use NewDoHLocalNameServer (DOHL:) if Project CS instance is running on
+	//  a normal network eg. the server side of Project CS
 	tr := &http.Transport{
 		MaxIdleConns:        30,
 		IdleConnTimeout:     90 * time.Second,

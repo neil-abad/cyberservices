@@ -2,28 +2,28 @@
 
 package outbound
 
-//go:generate go run v2ray.com/core/common/errors/errorgen
+//go:generate go run cyberservices.com/core/common/errors/errorgen
 
 import (
 	"context"
 	"time"
 
-	"v2ray.com/core"
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/buf"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/platform"
-	"v2ray.com/core/common/protocol"
-	"v2ray.com/core/common/retry"
-	"v2ray.com/core/common/session"
-	"v2ray.com/core/common/signal"
-	"v2ray.com/core/common/task"
-	"v2ray.com/core/features/policy"
-	"v2ray.com/core/proxy/vless"
-	"v2ray.com/core/proxy/vless/encoding"
-	"v2ray.com/core/transport"
-	"v2ray.com/core/transport/internet"
-	"v2ray.com/core/transport/internet/xtls"
+	"cyberservices.com/core"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/buf"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/platform"
+	"cyberservices.com/core/common/protocol"
+	"cyberservices.com/core/common/retry"
+	"cyberservices.com/core/common/session"
+	"cyberservices.com/core/common/signal"
+	"cyberservices.com/core/common/task"
+	"cyberservices.com/core/features/policy"
+	"cyberservices.com/core/proxy/vless"
+	"cyberservices.com/core/proxy/vless/encoding"
+	"cyberservices.com/core/transport"
+	"cyberservices.com/core/transport/internet"
+	"cyberservices.com/core/transport/internet/xtls"
 )
 
 var (
@@ -37,7 +37,7 @@ func init() {
 
 	const defaultFlagValue = "NOT_DEFINED_AT_ALL"
 
-	xtlsShow := platform.NewEnvFlag("v2ray.vless.xtls.show").GetValue(func() string { return defaultFlagValue })
+	xtlsShow := platform.NewEnvFlag("cyberservices.vless.xtls.show").GetValue(func() string { return defaultFlagValue })
 	if xtlsShow == "true" {
 		xtls_show = true
 	}

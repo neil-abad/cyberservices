@@ -6,10 +6,10 @@ import (
 	"context"
 	"sync"
 
-	"v2ray.com/core/common"
-	"v2ray.com/core/common/net"
-	"v2ray.com/core/common/signal/done"
-	"v2ray.com/core/transport"
+	"cyberservices.com/core/common"
+	"cyberservices.com/core/common/net"
+	"cyberservices.com/core/common/signal/done"
+	"cyberservices.com/core/transport"
 )
 
 // OutboundListener is a net.Listener for listening gRPC connections.

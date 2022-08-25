@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package v2ray.core.app.commander;
-option csharp_namespace = "V2Ray.Core.App.Commander";
-option go_package = "v2ray.com/core/app/commander";
-option java_package = "com.v2ray.core.app.commander";
+package cyberservices.core.app.commander;
+option csharp_namespace = "cyberservices.Core.App.Commander";
+option go_package = "cyberservices.com/core/app/commander";
+option java_package = "com.cyberservices.core.app.commander";
 option java_multiple_files = true;
 
 import "common/serial/typed_message.proto";
@@ -14,5 +14,5 @@ message Config {
   string tag = 1;
   // Services that supported by this server. All services must implement Service
   // interface.
-  repeated v2ray.core.common.serial.TypedMessage service = 2;
+  repeated cyberservices.core.common.serial.TypedMessage service = 2;
 }

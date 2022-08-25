@@ -3,7 +3,7 @@ package policy
 import (
 	"time"
 
-	"v2ray.com/core/features/policy"
+	"cyberservices.com/core/features/policy"
 )
 
 // Duration converts Second to time.Duration.
