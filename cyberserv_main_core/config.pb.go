@@ -147,6 +147,18 @@ func (x *InboundHandlerConfig) Reset() {
 	}
 }
 
+func (x *Config) ProtoReflect() protoreflect.Message {
+	mi := &file_config_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
 func (x *InboundHandlerConfig) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
@@ -350,6 +362,15 @@ func file_config_proto_rawDescGZIP() []byte {
 		file_config_proto_rawDescData = protoimpl.X.CompressGZIP(file_config_proto_rawDescData)
 	})
 	return file_config_proto_rawDescData
+}
+
+func (x *OutboundHandlerConfig) Reset() {
+	*x = OutboundHandlerConfig{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_config_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
 }
 
 var file_config_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
